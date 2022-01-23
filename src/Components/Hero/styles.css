@@ -1,0 +1,214 @@
+.heroArea {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* sets section as its own container  */
+
+.heroArea:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: 25;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>logo bar<<<<<<<<<<<<<<<<<<<<< */
+.NavContainer {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.534) , transparent);
+}
+.logoContainer {
+  min-width: 70%;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.logo span {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 850px) {
+  .NavContainer {
+    top: 92%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.534), transparent);
+    z-index: 100;
+  }
+  .logoContainer {
+  padding: 0 ;
+
+  }
+  .logo {
+  font-size: 1.9rem;
+  }
+  .logo span {
+    font-size: 1.6rem;
+
+  }
+}
+/* >>>>>>>>>>>>>>>>>>>>>>> Tittle <<<<<<<<<<<<<<<<<<<<< */
+.heroTitleBox {
+  z-index: 30;
+  position: absolute;
+  top: calc(50% - 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 16%;
+  min-width: 30%;
+  box-shadow: 2px 2px 3px black;
+  border-color: white;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.heroTitleBox p {
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-size: 60px;
+  font-weight: 900;
+}
+@media (max-width: 1025px) {
+  .heroTitleBox {
+    min-height: 10%;
+  min-width: 40%;
+
+  }
+
+}
+
+@media (max-width: 850px) {
+  .heroTitleBox {
+    min-height: 0;
+    min-width: 0;
+  }
+  .heroTitle {
+    font-size: 0;
+  }
+}
+@media (max-width: 400px) {
+  .heroTitleBox {
+    min-height: 10%;
+    min-width: 80%;
+    top: calc(85% - 2rem);
+    opacity: 0;
+  }
+  .heroTitle {
+    font-size: 30px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>> planes <<<<<<<<<<<<<<<<<<<<< */
+
+.hiker {
+  width: 920px;
+  position: absolute;
+  bottom: -80px;
+  left: -100px;
+  z-index: 10;
+}
+
+.plane2 {
+  width: 1800px;
+  position: absolute;
+  bottom: -1050px;
+  right: 0;
+  z-index: 8;
+}
+
+.plane3 {
+  width: 1100px;
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  z-index: 7;
+}
+
+.plane4 {
+  width: 1900px;
+  position: absolute;
+  bottom: 20px;
+  left: -10px;
+  z-index: 5;
+}
+
+.sky {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+}
+
+
+@media (max-width: 1050px) {
+  .hiker {
+    bottom: -150px;
+  }
+  .plane2 {
+    width: 1600px;
+    /* bottom: -100px; */
+  }
+  .plane4 {
+    width: 1990px;
+    bottom: 90px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 850px) {
+  .hiker {
+    bottom: -100px;
+  }
+  .plane2 {
+    width: 1500px;
+    bottom: - 50px;
+
+  }
+  .plane4 {
+    bottom: 50px;
+    left: -100px;
+  }
+}
+
+/* @media (max-width: 400px) {
+  .hiker {
+    bottom: -500px;
+  }
+
+} */
+

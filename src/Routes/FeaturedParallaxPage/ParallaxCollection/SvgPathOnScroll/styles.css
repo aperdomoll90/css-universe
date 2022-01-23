@@ -1,0 +1,255 @@
+:root {
+  --seaWhite: #fff;
+  --seaWhiteTransp: rgba(255, 255, 255, 0.493);
+  --seaBlue: #0f1a43;
+  --seaBlack: #000;
+  --seaBlackTransp: rgba(0, 0, 0, 0.589);
+  --seaLightBlue: #5d7fd6;
+  --seaPaleBlue:#DFEDF3;
+  --seaRed: #e20953;
+  --seaGreen: #ae9861;
+  --seaOrange: #dd5700;
+  --seaPaleRed: #e20953;
+  --coverAnimationTime: 1.5s;
+  --standardAnimationTime:1.5s;
+  --firstDelayGroup: calc(var(--coverAnimationTime) - 0.5s);
+  --secondDelayGroup: var(--coverAnimationTime);
+  --thirdDelayGroup: calc(var(--coverAnimationTime) + 1s);
+}
+/* >>>>>>>>>>>>>>>>>>> Animations <<<<<<<<<<<<<<< */
+@keyframes onLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes onLoadCover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -20;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>> for Java Script <<<<<<<<<<<<<<<< */
+.seaActive {
+  width: 100vw !important;
+  opacity: 1;
+}
+
+.seaInactive {
+  width: 0 !important;
+  opacity: 0;
+}
+
+/* >>>>>>>>>>>>>>>>>> Global Sections <<<<<<<<<<<<<<<<<<<<< */
+#SvgPathOnScrollWrapper {
+  position: relative;
+  height: 580vh;
+  margin: 0;
+  background: var(--seaWhite);
+  overflow: hidden;
+}
+#SvgPathOnScrollWrapper::after {
+  content: '';
+  position: absolute;
+  z-index: 17;
+  top: 0;
+  left: 0;
+  height: 580vh;
+  width: 100%;
+  margin: 0;
+  background: var(--seaWhiteTransp);
+  animation: onLoadCover var(--coverAnimationTime);
+  animation-fill-mode: forwards;
+}
+
+#SvgPathOnScrollWrapper section {
+  height: 120vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>  FONTS <<<<<<<<<<<<<<<<<< */
+
+#SvgPathOnScrollWrapper h2 {
+  color: #0f1a43;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Times New Roman', serif;
+}
+
+#SvgPathOnScrollWrapper h3 {
+  position: absolute;
+  z-index: 15;
+  bottom: 3rem;
+  color: var(--seaBlue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  animation: onLoad 2s ease-in-out;
+  animation-delay: var(--thirdDelayGroup);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.whiteIndicator {
+  color: var(--seaWhite) !important;
+}
+
+#SvgPathOnScrollWrapper h5 {
+  color: var(--seaBlack);
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#SvgPathOnScrollWrapper p {
+  color: var(--seaBlue);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.copyRight {
+  margin-bottom: 0.5rem;
+}
+
+/* >>>>>>>>>>>>> LINE SVG <<<<<<<<<<<<< */
+.lineContainer {
+  height: 79.5%;
+  position: absolute;
+  top: 56.9vh;
+  left: -10%;
+  text-align: center;
+  overflow: hidden;
+  z-index: 12;
+}
+
+.lineContainer svg {
+  display: inline-block;
+  height: 100%;
+}
+
+.lineContainer svg path {
+  stroke: var(--seaRed);
+  stroke-width: 3;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>> BUTTON <<<<<<<<<<<<<<<< */
+
+.seaButton {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 35px;
+  outline: 4px solid var(--seaBlue);
+  color: var(--seaBlue);
+  background: var(--seaWhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 100;
+}
+
+.seaButton:hover {
+  outline: 4px solid var(--seaLightBlue);
+  color: var(--seaLightBlue);
+}
+
+/*  >>>>>>>>>>>>>>>>>  FOOTER <<<<<<<<<<<<<< */
+.seaFloor {
+  width: 100%;
+  height: 7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--seaBlue);
+}
+.seaFloor p {
+  color: var(--seaWhite) !important;
+}
+
+.seaFloorLinks {
+  width: 100%;
+  height: 5rem;
+}
+
+/* // Small devices (landscape phones, 576px and up)  */
+@media (min-width: 576px) {
+  .lineContainer {
+    height: 79.7%;
+    width: 100%;
+    left: -4%;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) {
+  .lineContainer {
+    height: 79.7%;
+    width: 100%;
+    left: -2%;
+  }
+}
+
+/* // Large devices (desktops, 992px and up)  */
+@media (min-width: 992px) {
+  #SvgPathOnScrollWrapper {
+    position: relative;
+    height: 500vh;
+  }
+
+  #SvgPathOnScrollWrapper section {
+    height: 100vh;
+  }
+  .lineContainer {
+    height: 79%;
+    left: -1%;
+  }
+
+  #SvgPathOnScrollWrapper h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    line-height: 3.6rem;
+    margin-bottom: 1rem;
+  }
+  #SvgPathOnScrollWrapper p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.85rem;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up)  */
+/* @media (min-width: 1200px) { ... }  */
+
+/* // XX-Large devices (larger desktops, 1400px and up)  */
+/* @media (min-width: 1400px) { ... }  */

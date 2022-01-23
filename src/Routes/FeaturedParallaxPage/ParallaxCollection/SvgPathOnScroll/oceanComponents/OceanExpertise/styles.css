@@ -1,0 +1,80 @@
+#OceanExpertise {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to top, var(--seaPaleBlue) 50%, var(--seaWhite) 50%);
+}
+
+.sectionThreeContent {
+  width: 100%;
+  height: 28rem;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0rem;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--seaBlue);
+  background: var(--seaWhite);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.threeDarkWaves {
+  width: 17rem;
+  position: absolute;
+  top: 4.5rem;
+  left: 0rem;
+  z-index: 0;
+}
+.OceanExpertiseImageContainer{
+  width: 100%;
+  height: 40rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  overflow: hidden;
+}
+.OceanExpertiseImageContainer img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* // Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) {
+  .sectionThreeContent {
+    width: 23rem;
+    height: 40rem;
+    padding-left: 3.5rem;
+    top: calc(50% - 20rem);
+    right: 0%;
+    z-index: 7;
+    background: transparent;
+  }
+  .OceanExpertiseImageContainer{
+    width:  50.2%;
+    height: 40rem;
+    bottom: calc(50% - 20rem);
+  }
+}
+
+/* // Large devices (desktops, 992px and up)  */
+@media (min-width: 992px) {
+  .sectionThreeContent {
+    width: 45rem;
+    height: 25rem;
+    padding-left: 3.5rem;
+    top: calc(50% - 13rem);
+    right: calc(50% - 50rem);
+    background: transparent;
+  }
+  .OceanExpertiseImageContainer{
+    height: 50rem;
+    bottom: calc(50% - 25rem);
+  }
+}
+
