@@ -7,7 +7,7 @@
   justify-content: space-evenly;
 }
 #OceanProducts p {
-  color: var(--seaWhite) !important;
+  color: var(--white) !important;
 }
 
 .sectionFourContent {
@@ -29,7 +29,7 @@
   font-weight: 400;
   font-size: 2.5rem;
   letter-spacing: 0.4rem;
-  color: var(--seaWhite) !important;
+  color: var(--white) !important;
   font-family: 'Times New Roman', serif;
 }
 
@@ -46,7 +46,7 @@
   justify-content: flex-start;
 }
 .productCarousel p {
-  color: var(--seaWhite) !important;
+  color: var(--white) !important;
   font-weight: 100;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
@@ -93,7 +93,7 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  color: var(--seaWhite) !important;
+  color: var(--white) !important;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-weight: 600;
@@ -115,16 +115,16 @@
   width: 15rem;
   outline: 4px solid var(--seaRed);
   background: var(--seaBlue);
-  color: var(--seaWhite);
+  color: var(--white);
   font-size: 0.9rem;
   position: absolute;
-  bottom: 9rem;
+  bottom: 7rem;
   z-index: 15;
 }
 
 .finOutButton:hover {
-  outline: 4px solid var(--seaWhite);
-  color: var(--seaWhite);
+  outline: 4px solid var(--white);
+  color: var(--white);
 }
 
 /* // Small devices (landscape phones, 576px and up)  */
@@ -161,7 +161,7 @@
   }
 
   .productCarousel {
-    height: 55%;
+    height: 52%;
     width: 85%;
     top: 12rem;
     padding-left: 1rem;
@@ -176,6 +176,19 @@
     height: 95%;
     margin: 1.2%;
   }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up)  */
+@media (min-width: 2000px) {
+  .productCarousel {
+    height: 65%;
+    top: 16rem;
+  }
+
+  .ScubaTank {
+    height: 40rem !important;
+  }
+
 }
 
 /* // X-Large devices (large desktops, 1200px and up)  */

@@ -1,7 +1,6 @@
-
 /* >>>>>>>>>>>>>> Fields <<<<<<<<<<< */
 #OceanAbout {
-  background: var(--seaWhite);
+  background: var(--white);
   z-index: 15;
 }
 
@@ -13,13 +12,15 @@
   z-index: 15;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   color: var(--seaBlue);
   font-family: 'Montserrat', sans-serif;
-  animation: OceanAboutOnLoad var(--standardAnimationTime) ease-in-out;
-  animation-delay: var(--firstDelayGroup);
-  animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.sectionTwoContentAnimation {
+  animation: OceanAboutOnLoad var(--standardRingAnimationTime) ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .twoDarkWaves {
@@ -58,20 +59,26 @@
   justify-content: center;
   overflow: hidden;
   z-index: 5;
-  animation: ringAnimation var(--standardAnimationTime) ease-in-out;
-  animation-fill-mode: forwards;
-  /* transform: scale(0); */
+  transform: scale(0);
 }
+
 .centerRing {
   height: 55%;
   width: 55%;
   border-radius: 50%;
-  background-color: var(--seaWhite);
+  background-color: var(--white);
   z-index: 8;
-  animation: ringAnimation var(--standardAnimationTime) ease-in-out;
-  animation-delay: .7s;
-  animation-fill-mode: forwards;
   transform: scale(0);
+}
+
+.lighterRingAnimationAnimation {
+  animation: ringAnimation var(--standardRingAnimationTime) ease-in-out;
+  animation-fill-mode: forwards;
+}
+.lighterRingAnimationAnimation .centerRing {
+  animation: ringAnimation var(--standardRingAnimationTime) ease-in-out;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
 }
 
 .innerWave {
@@ -80,8 +87,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation:none;
-
+  animation: none;
 }
 /* // Small devices (landscape phones, 576px and up)  */
 @media (min-width: 576px) {
@@ -116,14 +122,14 @@
 /* // Large devices (desktops, 992px and up)  */
 @media (min-width: 992px) {
   .sectionTwoContent {
-    width: 35rem;
-    height: 30rem;
-    top: calc(50% - 22rem);
-    left: calc(50% - 47rem);
+    width: 30%;
+    height: 46%;
+    top: calc(50% - 27%);
+    left: calc(50% - 43%);
     letter-spacing: 0.1rem;
   }
   .sectionTwoContent .seaButton {
-    bottom: -10rem;
+    bottom: -7rem;
   }
   .twoDarkWaves {
     width: 22rem;
@@ -145,6 +151,34 @@
   }
 }
 
+/* // XX-Large devices (larger desktops, 1400px and up)  */
+@media (min-width: 2000px) {
+  .sectionTwoContent {
+    height: 40%;
+  }
+  .sectionTwoContent .seaButton {
+    bottom: -10rem;
+  }
+  .twoDarkWaves {
+    width: 25rem;
+    right: calc(50% - 45rem);
+    bottom: calc(50% + 1rem);
+  }
+
+  .twoLightWaves {
+    width: 57rem;
+    right: calc(50% - 79rem);
+    bottom: calc(50% - 43rem);
+  }
+
+  .lighterRing {
+    height: 75vh;
+    width: 75vh;
+    top: calc(50% - 38.5vh);
+    left: calc(50% - 38.5vh);
+  }
+}
+
 /* >>>>>> About us animation */
 @keyframes ringAnimation {
   0% {
@@ -157,10 +191,10 @@
 
 @keyframes OceanAboutOnLoad {
   0% {
-    transform:translateX(5rem);
+    transform: translateX(5rem);
   }
   100% {
-    transform:translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }

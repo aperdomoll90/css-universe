@@ -5,6 +5,49 @@
   box-sizing: border-box;
 }
 
+
+:root {
+  --white: #fff;
+  --seaWhiteTransp: rgba(255, 255, 255, 0.774);
+
+  --blackTransp:rgba(0, 0, 0, 0.26);
+  --black: #000;
+  --seaBlackTransp: rgba(0, 0, 0, 0.589);
+
+  --seaBlue: #0f1a43;
+  --seaLightBlue: #5d7fd6;
+  --seaPaleBlue:#DFEDF3;
+
+  --seaGreen: #ae9861;
+  --seaOrange: #dd5700;
+
+  --seaRed: #e20953;
+  --seaPaleRed: #e20953;
+
+
+  /* >>>>>> SEA ANIMATION TIMES <<<<<<<<<< */
+  --coverAnimationTime: 2.5s;
+  --standardAnimationTime:1s;
+  --standardRingAnimationTime:1.5s;
+  --firstDelayGroup: calc(var(--standardAnimationTime) - 0.5s);
+  --secondDelayGroup: var(--standardAnimationTime);
+  --thirdDelayGroup: calc(var(--standardAnimationTime) + 1s);
+}
+
+
+/* >>>>>>>>>>> ANIMATIONS <<<<<<<<<<<<< */
+@keyframes onLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
 }

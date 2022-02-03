@@ -14,10 +14,13 @@ function Hero() {
   return (
     <div className='heroArea'>
      <div className='NavContainer'>
-      <div className='logoContainer'>
+      {/* <div className='logoContainer'>
         <p className='logo'>
           css<span>forge </span>
         </p>
+      </div> */}
+      <div className='mainLogo'>
+        <span>css</span>forge 
       </div>
     </div>
       <div className='heroTitleBox translate' data-speed='0.1'>

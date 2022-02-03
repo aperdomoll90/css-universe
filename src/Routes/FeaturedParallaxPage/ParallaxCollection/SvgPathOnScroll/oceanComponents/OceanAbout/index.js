@@ -1,8 +1,8 @@
 import './styles.css'
 import darkWaves from '../../oceanMedia/darkWaves.svg'
 import lightWaves from '../../oceanMedia/lightWaves.svg'
-import innerWave from '../../oceanMedia/innerWaveClipped.mp4'
 
+const innerWave = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/innerWaveClipped.mp4?alt=media&token=234cc1df-e5c2-4f33-8c92-8b8778823f93'
 
 function OceanAbout() {
   return (
@@ -22,7 +22,7 @@ function OceanAbout() {
       <div className='lighterRingPosition'>
         <div className='lighterRing'>
           <div className='centerRing' />
-          <video loop autoPlay muted className='innerWave' src={innerWave} />
+          <video loop autoPlay muted className='innerWave' src={innerWave} type='video/mp4' />
         </div>
       </div>
       <img className='twoLightWaves' src={lightWaves} />

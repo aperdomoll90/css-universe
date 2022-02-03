@@ -1,12 +1,34 @@
 #oceanHero {
   height: 100vh !important;
-  background: url('../../oceanMedia/clifts.png');
+  background: url('../../oceanMedia/boatDonnutPicBack.png');
   background-size: cover;
-  background-position: 50% 50%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.videoBackground {
+  height: 100vh;
+  width: auto;
+  position: absolute;
+  top: 0;
+}
+
+#oceanHero::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 17;
+
+  margin: 0;
+  background: var(--seaWhiteTransp);
+  animation: onLoadCover var(--coverAnimationTime);
+  animation-fill-mode: forwards;
 }
 
 /* >>>>>>>>>> Logo >>>>>>>>>> */
@@ -23,7 +45,7 @@
   font-size: 1rem;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
-  color: var(--seaBlue);
+  color: var(--seaLightBlue);
   text-transform: uppercase;
   animation: onLoad 2s ease-in-out;
   animation-delay: var(--firstDelayGroup);
@@ -38,15 +60,14 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: var(--seaWhite) !important;
-  outline: 3px solid var(--seaBlue);
+  color: var(--white) !important;
+  outline: 3px solid var(--seaLightBlue);
 }
 
 /* >>>>>>>>>>>>> S vector  >>>>>>>>> */
 .sPathSvg {
   height: 26rem;
   width: 18rem;
-  transform: scale(100%);
   position: relative;
   z-index: 15;
   overflow: hidden;
@@ -57,10 +78,12 @@
     'M260 79.4998V34.9998C258 5.49982 179 0.999941 168 0.999756C106.482 0.998721 70.997 30.2734 66 68.4998C56 145 120.269 184.5 107 229.5C79.7211 322.011 0.677278 267.013 1.00001 271C9.5 376 106 411 132.5 411C137 411 213.5 419 254.5 359.5C346.464 226.04 110 142.5 179 72.5C202.657 48.5 243.5 68.5 252.5 79.4998C253.007 80.1189 258 84.4998 260 79.4998Z'
   );
 
-  animation: onLoad 4s ease-in-out;
-  animation-delay:var(--secondDelayGroup);
+  animation: sOnLoad 4s ease-in-out;
+  animation-delay: var(--secondDelayGroup);
   animation-fill-mode: forwards;
   opacity: 0;
+
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .videoFeature {
@@ -69,4 +92,54 @@
   position: absolute;
   top: 0;
   left: -12rem;
+}
+
+/* // Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) {
+  .videoBackground {
+    height: 110vh;
+    width: auto;
+  }
+}
+/* // XX-Large devices (larger desktops, 1400px and up)  */
+@media (min-width: 2000px) {
+  .sPathSvg {
+  animation: sOnLoadLarge 4s ease-in-out;
+  animation-delay: var(--secondDelayGroup);
+  animation-fill-mode: forwards;
+  opacity: 0;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>> Animations <<<<<<<<<<<<<<< */
+
+@keyframes sOnLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem) scale(90%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(96%);
+  }
+}
+
+@keyframes sOnLoadLarge {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem) scale(140%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(160%);
+  }
+}
+
+@keyframes onLoadCover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

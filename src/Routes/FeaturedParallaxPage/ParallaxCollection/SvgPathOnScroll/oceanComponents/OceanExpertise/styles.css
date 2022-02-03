@@ -1,7 +1,7 @@
 #OceanExpertise {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to top, var(--seaPaleBlue) 50%, var(--seaWhite) 50%);
+  background: linear-gradient(to top, var(--seaPaleBlue) 50%, var(--white) 50%);
 }
 
 .sectionThreeContent {
@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   color: var(--seaBlue);
-  background: var(--seaWhite);
+  background: var(--white);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -26,7 +26,7 @@
   left: 0rem;
   z-index: 0;
 }
-.OceanExpertiseImageContainer{
+.OceanExpertiseImageContainer {
   width: 100%;
   height: 40rem;
   position: absolute;
@@ -40,23 +40,21 @@
   width: auto;
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
 }
-
 
 /* // Medium devices (tablets, 768px and up)  */
 @media (min-width: 768px) {
   .sectionThreeContent {
     width: 23rem;
     height: 40rem;
-    padding-left: 3.5rem;
     top: calc(50% - 20rem);
     right: 0%;
     z-index: 7;
     background: transparent;
   }
-  .OceanExpertiseImageContainer{
-    width:  50.2%;
+  .OceanExpertiseImageContainer {
+    width: 50.2%;
     height: 40rem;
     bottom: calc(50% - 20rem);
   }
@@ -65,16 +63,37 @@
 /* // Large devices (desktops, 992px and up)  */
 @media (min-width: 992px) {
   .sectionThreeContent {
-    width: 45rem;
-    height: 25rem;
-    padding-left: 3.5rem;
-    top: calc(50% - 13rem);
-    right: calc(50% - 50rem);
-    background: transparent;
+    width: 35%;
+    height: 40%;
+    top: calc(50% - 23%);
+    right: calc(50% - 40%);
+    justify-content: flex-start;
   }
-  .OceanExpertiseImageContainer{
+  .sectionThreeContent p {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .OceanExpertiseImageContainer {
     height: 50rem;
     bottom: calc(50% - 25rem);
   }
 }
 
+/* // XX-Large devices (larger desktops, 1400px and up)  */
+@media (min-width: 2000px) {
+  .sectionThreeContent {
+    height: 36%;
+  }
+  .OceanExpertiseImageContainer {
+    width: 50%;
+    height: 70rem;
+    bottom: calc(50% - 35rem);
+  }
+
+  .threeDarkWaves {
+    width: 35rem;
+    top: 0rem;
+    left: 1rem;
+  }
+}

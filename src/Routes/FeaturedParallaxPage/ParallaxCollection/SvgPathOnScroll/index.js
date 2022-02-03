@@ -22,10 +22,8 @@ function SvgPathOnScroll() {
       // length to offset he dashes
       const drawLength = pathLength * scrollPercentage
 
-      console.log("drawLength", drawLength)
-
       // Draw in reverse
-      path.style.strokeDashoffset = pathLength - drawLength 
+      path.style.strokeDashoffset = pathLength - drawLength
 
       // Contact us slider
       let contactMeClickButton = document.querySelector('.contactClick')
@@ -34,20 +32,61 @@ function SvgPathOnScroll() {
       let fiveDefault = document.querySelector('.fiveDefault')
       let seaContactUs = document.querySelector('.seaContactUs')
 
-      contactMeClickButton.onclick = function () {
-        fiveDefault.classList.remove('seaActive')
-        seaContactUs.classList.remove('seaInactive')
+      if (contactMeClickButton) {
+        contactMeClickButton.onclick = function () {
+          fiveDefault.classList.remove('seaActive')
+          seaContactUs.classList.remove('seaInactive')
 
-        fiveDefault.classList.add('seaInactive')
-        seaContactUs.classList.add('seaActive')
+          fiveDefault.classList.add('seaInactive')
+          seaContactUs.classList.add('seaActive')
+        }
       }
 
-      formButton.onclick = function () {
-        fiveDefault.classList.remove('seaInactive')
-        seaContactUs.classList.remove('seaActive')
-        // alert('Email Sent')
+      if (formButton) {
+        formButton.onclick = function () {
+          fiveDefault.classList.remove('seaInactive')
+          seaContactUs.classList.remove('seaActive')
+          // alert('Email Sent')
+        }
       }
     })
+
+    // fade in animations
+
+    // >>>>>>> sectionTwoContentAnimation
+    let sectionTwoContent = document.querySelector('.sectionTwoContent')
+
+    const sectionTwoContentObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('sectionTwoContentAnimation', entry.isIntersecting)
+          if (entry.isIntersecting) sectionTwoContentObserver.unobserve(entry.target)
+        })
+      },
+      {
+        threshold: 0.4,
+      }
+    )
+
+    sectionTwoContentObserver.observe(sectionTwoContent)
+
+    // >>>>>>> lighterRingAnimation
+    let lighterRing = document.querySelector('.lighterRing')
+
+    const lighterRingObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('lighterRingAnimationAnimation', entry.isIntersecting)
+          if (entry.isIntersecting) lighterRingObserver.unobserve(entry.target)
+        })
+      },
+      {
+        threshold: 0,
+        rootMargin: '30%',
+      }
+    )
+
+    lighterRingObserver.observe(lighterRing)
   }, [])
 
   return (

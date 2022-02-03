@@ -2,7 +2,8 @@ import './styles.css'
 
 import darkWaves from '../../oceanMedia/darkWaves.svg'
 import lightWaves from '../../oceanMedia/lightWaves.svg'
-import videoFeature from '../../oceanMedia/waves.mp4'
+
+const videoFeature = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/waves.mp4?alt=media&token=95ec6278-3199-40b3-a1d2-6ae3187ad84f'
 
 // smallText
 function OceanContactUs() {
