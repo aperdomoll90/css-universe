@@ -1,36 +1,22 @@
 import './styles.css'
-import hiker from './images/hiker.png'
-import plane2 from './images/plane2.png'
-import plane3 from './images/plane3.png'
-import plane4 from './images/plane4.png'
-import sky from './images/sky.png'
-
-// To add components to the Parallax add .translate and specify a data-speed
-// By altering the "data-speed" values we alter the speed movement
-// By adding negative value the component will go up
+import HikerParallax from '../../Routes/FeaturedParallaxPage/HikerParallax'
+// import videoFeature from './images/forestColors.mp4'
+// const videoFeature = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/waves.mp4?alt=media&token=95ec6278-3199-40b3-a1d2-6ae3187ad84f'
 
 function Hero() {
-
   return (
     <div className='heroArea'>
-     <div className='NavContainer'>
-      {/* <div className='logoContainer'>
-        <p className='logo'>
-          css<span>forge </span>
-        </p>
+      <div className='NavContainer'>
+        <div className='mainLogo'>
+          <span>css</span>forge
+        </div>
+      </div>
+      {/* <div className='heroTitleBox' data-speed='0.1'>
+        <div class='forestCube'>
+          <video loop autoPlay muted className='videoFeature' src={videoFeature} />
+        </div>
       </div> */}
-      <div className='mainLogo'>
-        <span>css</span>forge 
-      </div>
-    </div>
-      <div className='heroTitleBox translate' data-speed='0.1'>
-        <p className='heroTitle'>CSS forge</p>
-      </div>
-      <img src={hiker} className='hiker translate' data-speed='0.3' alt='hiker' />
-      <img src={plane2} className='plane2 translate' data-speed='-0.9' alt='mountain forest' />
-      <img src={plane3} className='plane3 translate' data-speed='0.2' alt='medium mountain' />
-      <img src={plane4} className='plane4 translate' data-speed='-0.5' alt='High mountain peeks covered in snow' />
-      <img src={sky} className='sky translate' data-speed='0.5' alt='sky' />
+      <HikerParallax/>
     </div>
   )
 }

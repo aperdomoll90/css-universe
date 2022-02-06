@@ -9,24 +9,14 @@ function SectionOne() {
     <section className='sectionOne'>
       <div className='shadow' />
       <div className='container'>
-        <div className='content opacity'>
+        <div className='content opacity' data-speed='-1.3'>
           <h3 className='title'>
             WELCOME
             <div className='border' />
           </h3>
           <p className='text'>CSS Forge is a place to showcase my personal projects - pieces of my creative mind to explore ideas i have or have learned from others. Hope you enjoy them, as much as I enjoyed creating them!</p>
         </div>
-        <div className='imgContainer opacity'>
-          <Narwhal />
-          <Terrarium />
-         <div className="faeArea"><FaeLoader/></div> 
-          <div className='skillArea'>
-              <SkillBar level='90' skillName="html"/>
-              <SkillBar level='100' skillName="CSS"/>
-              <SkillBar level='80' skillName="React"/>
-              <SkillBar level='80' skillName="React Native"/>
-            </div>
-        </div>
+
       </div>
     </section>
   )

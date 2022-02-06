@@ -1,6 +1,6 @@
 .heroArea {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -16,10 +16,9 @@
   height: 100%;
   left: 0;
   top: 0;
-  background-color: var(--blackTransp);
+  background-color: var(--heroBlackTransp);
   z-index: 25;
 }
-
 
 /* >>>>>>>>>>>>>>>>>>>logo bar<<<<<<<<<<<<<<<<<<<<< */
 .NavContainer {
@@ -33,7 +32,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: linear-gradient(to bottom, var(--seaBlackTransp) , transparent);
+  background: linear-gradient(to bottom, var(--seaBlackTransp), transparent);
 }
 
 /* >>>>>>>>>> Logo >>>>>>>>>> */
@@ -66,153 +65,24 @@
   outline: 3px solid var(--seaGreen);
 }
 
-
-@media (max-width: 850px) {
-  .NavContainer {
-    top: 92%;
-    background: linear-gradient(to top, var(--seaBlackTransp), transparent);
-    z-index: 100;
-  }
-  .logoContainer {
-  padding: 0 ;
-
-  }
-  .logo {
-  font-size: 1.9rem;
-  }
-  .logo span {
-    font-size: 1.6rem;
-
-  }
-}
 /* >>>>>>>>>>>>>>>>>>>>>>> Tittle <<<<<<<<<<<<<<<<<<<<< */
 .heroTitleBox {
-  z-index: 30;
+  height: 200px;
+  width: 200px;
   position: absolute;
-  top: calc(50% - 2rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 16%;
-  min-width: 30%;
-  box-shadow: 2px 2px 3px var(--black);
-  border:4px solid var(--white);
-  border-radius: 10px;
+  top: 16rem;
+  left: 7rem;
+  z-index: 9;
 }
 
-.heroTitleBox p {
-  text-transform: uppercase;
+.forestCube {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: scale(165%);
+  clip-path: path(
+    'M181.46,100.84,123.9,8.4A16.74,16.74,0,0,0,100.84,3L8.4,60.59A16.75,16.75,0,0,0,3,83.66L60.59,176.1a16.75,16.75,0,0,0,23.07,5.36L176.1,123.9A16.74,16.74,0,0,0,181.46,100.84Zm-59.8,9.52L95.77,126.49a15.69,15.69,0,0,1-21.59-5L58.06,95.57a15.66,15.66,0,0,1,5-21.58L89,57.86a15.69,15.69,0,0,1,21.59,5l16.12,25.9A15.66,15.66,0,0,1,121.66,110.36Z'
+  );
+ /* box-shadow: 80px 80px 1px black; */
 }
-
-.heroTitle {
-  color: var(--white);
-  text-shadow: 2px 2px 3px var(--black);
-  font-size: 60px;
-  font-weight: 900;
-}
-@media (max-width: 1025px) {
-  .heroTitleBox {
-    min-height: 10%;
-  min-width: 40%;
-
-  }
-
-}
-
-@media (max-width: 850px) {
-  .heroTitleBox {
-    min-height: 0;
-    min-width: 0;
-  }
-  .heroTitle {
-    font-size: 0;
-  }
-}
-@media (max-width: 400px) {
-  .heroTitleBox {
-    min-height: 10%;
-    min-width: 80%;
-    top: calc(85% - 2rem);
-    opacity: 0;
-  }
-  .heroTitle {
-    font-size: 30px;
-  }
-}
-
-/* >>>>>>>>>>>>>>>>>>>>>>> planes <<<<<<<<<<<<<<<<<<<<< */
-
-.hiker {
-  width: 920px;
-  position: absolute;
-  bottom: -80px;
-  left: -100px;
-  z-index: 10;
-}
-
-.plane2 {
-  width: 1800px;
-  position: absolute;
-  bottom: -1050px;
-  right: 0;
-  z-index: 8;
-}
-
-.plane3 {
-  width: 1100px;
-  position: absolute;
-  bottom: -70px;
-  left: 0;
-  z-index: 7;
-}
-
-.plane4 {
-  width: 1900px;
-  position: absolute;
-  bottom: 20px;
-  left: -10px;
-  z-index: 5;
-}
-
-.sky {
-  z-index: 4;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100vw;
-  height: 80vh;
-}
-
-
-@media (max-width: 1050px) {
-  .hiker {
-    bottom: -150px;
-  }
-  .plane2 {
-    width: 1600px;
-    /* bottom: -100px; */
-  }
-  .plane4 {
-    width: 1990px;
-    bottom: 90px;
-    left: 0px;
-  }
-}
-
-@media (max-width: 850px) {
-  .hiker {
-    bottom: -100px;
-  }
-  .plane2 {
-    width: 1500px;
-    bottom: - 50px;
-
-  }
-  .plane4 {
-    bottom: 50px;
-    left: -100px;
-  }
-}
-
 

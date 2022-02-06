@@ -10,8 +10,9 @@
   --white: #fff;
   --seaWhiteTransp: rgba(255, 255, 255, 0.774);
 
-  --blackTransp:rgba(0, 0, 0, 0.26);
   --black: #000;
+  --blackTransp:rgba(0, 0, 0, 0.26);
+  --heroBlackTransp:rgba(0, 0, 0, 0.109);
   --seaBlackTransp: rgba(0, 0, 0, 0.589);
 
   --seaBlue: #0f1a43;
