@@ -99,3 +99,18 @@
  /* box-shadow: 80px 80px 1px black; */
 }
 
+.heroArea h3 {
+  position: absolute;
+  z-index: 50;
+  bottom: 5rem;
+  color: var(--seaBlue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  animation: onLoad 2s ease-in-out;
+  animation-delay: var(--thirdDelayGroup);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}

@@ -4,6 +4,7 @@ const videoBackground = 'https://firebasestorage.googleapis.com/v0/b/cssforge.ap
 
 
 function OceanHero() {
+
   return (
     <section id='oceanHero'>
       <video loop autoPlay muted className='videoBackground'  src={videoBackground} />
@@ -12,7 +13,7 @@ function OceanHero() {
         forge
       </div>
       <div class='sPathSvg'/>
-      <h3 className='whiteIndicator'>SCROLL</h3>
+      <h3 className='whiteIndicator '>SCROLL</h3>
     </section>
   )
 }

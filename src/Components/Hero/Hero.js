@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './styles.css'
 import HikerParallax from '../../Routes/FeaturedParallaxPage/ParallaxCollection/HikerParallax/index'
 // import videoFeature from './images/forestColors.mp4'
@@ -16,7 +17,8 @@ function Hero() {
           <video loop autoPlay muted className='videoFeature' src={videoFeature} />
         </div>
       </div> */}
-      <HikerParallax/>
+      <h3 className='whiteIndicator'>SCROLL</h3>
+      <HikerParallax />
     </div>
   )
 }
