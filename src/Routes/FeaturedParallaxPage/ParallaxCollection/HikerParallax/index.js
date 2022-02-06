@@ -31,21 +31,21 @@ function HikerParallax() {
       // <<<<<<<<<<<<<<<<<<<< WIDTH
       if (backgroundMountain) {
           if(screenWidth < 992){
-            backgroundMountain.style.width = `${-scroll / 15 + 250}vw`
+            backgroundMountain.style.width = `${-scroll / 25 + 250}vw`
           }
           if(screenWidth > 991){
-            backgroundMountain.style.width = `${-scroll / 15 + 100}vw`
+            backgroundMountain.style.width = `${-scroll / 25 + 100}vw`
           }
       }
     })
   }, [])
   return (
     <div className='HikerParallax'>
-      <img src={hiker} className='hiker translate' data-speed='0.3' alt='hiker' />
-      <img src={plane2} className='plane2 translate' data-speed='-0.2' alt='mountain forest' />
-      <img src={plane3} className='plane3 translate' data-speed='-0.4' alt='medium mountain' />
-      <img src={backgroundMountain} className='backgroundMountain' alt='High mountain peeks covered in snow' />
-      <img src={sky} className='sky translate' data-speed='-0.3' alt='sky' />
+      <img src={hiker} className='hiker translate contentOnLoadAnimation' data-speed='0.3' alt='hiker' />
+      <img src={plane2} className='plane2 translate contentOnLoadAnimation' data-speed='-0.7' alt='mountain forest' />
+      <img src={plane3} className='plane3 translate contentOnLoadAnimation' data-speed='-0.4' alt='medium mountain' />
+      <img src={backgroundMountain} className='backgroundMountain contentOnLoadAnimation' alt='High mountain peeks covered in snow' />
+      <img src={sky} className='sky translate contentOnLoadAnimation' data-speed='-0.3' alt='sky' />
     </div>
   )
 }

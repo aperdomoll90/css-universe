@@ -28,6 +28,7 @@
 
   /* >>>>>> SEA ANIMATION TIMES <<<<<<<<<< */
   --coverAnimationTime: 2.5s;
+  --coverAnimationTimeExtended: 3s;
   --standardAnimationTime:1s;
   --standardRingAnimationTime:1.5s;
   --firstDelayGroup: calc(var(--standardAnimationTime) - 0.5s);
@@ -47,6 +48,16 @@
     transform: translateY(0);
   }
 }
+
+@keyframes onLoadCover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 
 body {

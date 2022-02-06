@@ -5,6 +5,26 @@
     overflow: hidden;
   }
 
+  /* .contentOnLoadAnimation{
+    opacity: 0;
+    animation: onLoadContent var(--coverAnimationTime);
+    animation-delay: var(--thirdDelayGroup);
+    animation-fill-mode: forwards;
+  } */
+
+  .HikerParallax::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 17;
+    margin: 0;
+    background: var(--black);
+    animation: onLoadCover var(--coverAnimationTimeExtended);
+    animation-fill-mode: forwards;
+  }
 
   .hiker {
     height:  55vh;
@@ -77,3 +97,12 @@
         right: 0;
       }
   }
+
+  @keyframes onLoadContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
