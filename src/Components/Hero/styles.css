@@ -41,6 +41,7 @@
   top: 0;
   left: 0;
   padding: 1.5rem;
+  padding-left: 3rem;
   z-index: 30;
   display: flex;
   flex-direction: row;
@@ -51,15 +52,15 @@
 /* >>>>>>>>>> Logo >>>>>>>>>> */
 .mainLogo {
   height: 2.5rem;
-  width: 8.5rem;
+  width: 7.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
-  color: var(--seaGreen);
+  color: var(--logoColor);
   text-transform: uppercase;
   animation: onLoad 2s ease-in-out;
   animation-delay: var(--firstDelayGroup);
@@ -68,14 +69,14 @@
 }
 .mainLogo span {
   height: 2rem;
-  width: 4rem;
+  width: 3.5rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--white);
-  outline: 3px solid var(--seaGreen);
+  outline: 3px solid var(--logoColor);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>> Tittle <<<<<<<<<<<<<<<<<<<<< */

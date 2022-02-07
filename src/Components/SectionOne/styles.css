@@ -1,36 +1,14 @@
-
-.sectionOne{
+:root {
+  --sunSize: 6rem;
+}
+.sectionOne {
   width: 100vw;
   height: 100vh;
-}
-.content {
-  width: 90%;
-  color: #fff;
-  font-size: 1.5rem;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  transform: translateY(-100px);
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-
-@media (max-width: 600px) {
-    .content {
-      font-size: 1rem;
-    }
-  }
-
-.border {
-  position: absolute;
-  width: 30%;
-  height: 3px;
-  background-color: #fff;
-  bottom: 0;
-  left: 0;
-}
-
-
-
 
 .shadow {
   height: 170px;
@@ -39,6 +17,60 @@
   bottom: 95%;
   left: 0;
   z-index: 20;
-  background: linear-gradient(to top, #151515, transparent);
+  background: linear-gradient(to top, var(--backgroundColor), transparent);
 }
 
+.navigationChart {
+  width: 70vw;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigationChart * {
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashedChart {
+  border: 2px dashed var(--white);
+}
+
+.planetHalo {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: -6rem;
+}
+
+.planetHalo::before {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -1rem;
+  background: rgb(175, 175, 169);
+}
+
+.firstCircle {
+  width: 40rem;
+  height: 40rem;
+}
+
+.secondRing {
+  width: 20rem;
+  height: 20rem;
+}
+
+.sun {
+  width: var(--sunSize);
+  height: var(--sunSize);
+  background: rgb(105, 105, 18);
+  box-shadow: 0px 0px 50px rgba(167, 167, 22, 0.616);
+}

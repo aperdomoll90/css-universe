@@ -7,6 +7,11 @@
 
 
 :root {
+
+  --backgroundColor:#000013;
+  --logoColor: #887850;
+
+  
   --white: #fff;
   --seaWhiteTransp: rgba(255, 255, 255, 0.774);
 
@@ -85,9 +90,8 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #151515;
-  /* background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(174, 250, 174, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-  background-size: 300% 300%;
+  background: linear-gradient(to bottom, var(--backgroundColor) 25%, transparent),radial-gradient(ellipse at bottom right,#151e64, #050a32 15%, #000013 40%);
+   /* background-size: 300% 300%;
   animation: gradient 15s ease infinite; */
 }
 

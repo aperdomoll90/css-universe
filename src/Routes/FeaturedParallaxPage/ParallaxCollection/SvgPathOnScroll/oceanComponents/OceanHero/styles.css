@@ -26,8 +26,8 @@
   z-index: 17;
 
   margin: 0;
-  background: var(--seaWhiteTransp);
-  animation: onLoadCover var(--coverAnimationTime);
+  background: var(--black);
+  animation: onLoadCover var(--coverAnimationTimeExtended);
   animation-fill-mode: forwards;
 }
 

@@ -8,15 +8,19 @@ function SectionOne() {
   return (
     <section className='sectionOne'>
       <div className='shadow' />
-      <div className='container'>
-        <div className='content opacity' data-speed='-1.3'>
-          <h3 className='title'>
-            WELCOME
-            <div className='border' />
-          </h3>
-          <p className='text'>CSS Forge is a place to showcase my personal projects - pieces of my creative mind to explore ideas i have or have learned from others. Hope you enjoy them, as much as I enjoyed creating them!</p>
-        </div>
+      <div className='navigationChart'>
+        <div className='firstCircle dashedChart'>
+          <div className='planetHalo dashedChart'>
+            <div className='sun' />
+          </div>
 
+          <div className='secondRing dashedChart'>
+            <div className='planetHalo dashedChart'>
+              <div className='sun' />
+            </div>
+            <div className='sun' />
+          </div>
+        </div>
       </div>
     </section>
   )
