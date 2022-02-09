@@ -1,0 +1,141 @@
+:root {
+  --cliffSize: calc(var(--sphereCircleSize) - 30%);
+
+  --plantColor: #512f69;
+  --flowerColor: #ac88cd;
+  --hillTwoColor: #6a3e7e;
+  --hillThreeColor: #6b3883;
+  --hillFourColor: #8149a1;
+  --cliffColor: #824885;
+  --nightSkyColor: #7060b0;
+  --planetMoonColor: #f1e6fd;
+  --planetMoonInnerHalo: #f1e6fd3a;
+  --planetMoonOuterHalo: #f1e6fd0e;
+}
+
+.planetCircleWrapping {
+  /* width: 30rem;
+  height: 30rem; */
+  border-radius: 50%;
+  position: absolute;
+
+  background: var(--nightSkyColor);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.planetCircleWrapping svg {
+  position: absolute;
+  bottom: -8%;
+  left: 0;
+}
+
+.planetMoon {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  position: absolute;
+  top: 8%;
+  right: 20%;
+  z-index: 2;
+  background: var(--planetMoonColor);
+  box-shadow: 0 0 0 2rem var(--planetMoonInnerHalo), 0 0 0 4rem var(--planetMoonOuterHalo);
+}
+
+.clift {
+  width: 25% !important;
+  left: -2% !important;
+  z-index: 1;
+  fill: var(--cliffColor);
+}
+
+.hillFour {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  fill: var(--hillFourColor);
+}
+
+.cactusRight {
+  width: auto;
+  height: 30%;
+  right: 15%;
+  left: auto !important;
+  bottom: 22% !important;
+  z-index: 3;
+  fill: var(--plantColor);
+}
+.cactusRightFlower {
+  width: auto;
+  max-height: 5%;
+  right: 21%;
+  left: auto !important;
+  bottom: 52% !important;
+  z-index: 2;
+  fill: var(--flowerColor);
+}
+
+.hillThree {
+  width: 100%;
+  height: auto;
+  z-index: 4;
+  fill: var(--hillThreeColor);
+}
+
+.plantLeft {
+  width: auto;
+  height: 8%;
+  left: 15% !important;
+  bottom: 22% !important;
+  z-index: 4;
+  fill: var(--plantColor);
+}
+
+.cactusLeft {
+  width: auto;
+  height: 30%;
+  left: 35% !important;
+  bottom: 15% !important;
+  z-index: 4;
+  fill: var(--plantColor);
+}
+
+.cactusFlowerRight {
+  width: auto;
+  max-height: 5%;
+  left: 46% !important;
+  bottom: 44% !important;
+  z-index: 3;
+  fill: var(--flowerColor);
+}
+.cactusFlowerLeft{
+    width: auto;
+    max-height: 5%;
+    left: 34% !important;
+    bottom: 35% !important;
+    z-index: 3;
+    fill: var(--flowerColor);
+  }
+
+.hillTwo {
+  width: 100%;
+  height: auto;
+  z-index: 5;
+  fill: var(--hillTwoColor);
+}
+
+.plantRight {
+  width: auto;
+  height: 9%;
+  right: 26%;
+  left: auto !important;
+  bottom: 11% !important;
+  z-index: 5;
+  fill: var(--plantColor);
+}
+.hillOne {
+  width: 100%;
+  height: auto;
+  z-index: 6;
+  fill: var(--plantColor);
+}
