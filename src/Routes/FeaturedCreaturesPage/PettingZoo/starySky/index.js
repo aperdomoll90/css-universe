@@ -34,10 +34,8 @@ export default function StarrySky() {
 
   return (
     <div className='StarrySky'>
-      <div className='twinklingArea'>
-        <div className='twinklingAreaDot twinklingAreaShadow' />
-      </div>
       <div class='stars'></div>
+      <div className="skyGradientFilter"></div>
       <div class='clouds'></div>
     </div>
   )

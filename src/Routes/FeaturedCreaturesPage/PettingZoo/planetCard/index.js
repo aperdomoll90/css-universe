@@ -8,7 +8,7 @@ function PlanetCard({size}) {
 
   return (
     <div className='planetCircleWrapping' style={circleSize} >
-      <div className='planetMoon' />
+      <div className='dayRotation' />
       <svg className='clift' viewBox='0 0 17 63' preserveAspectRatio='xMidYMax meet'>
         <path d='M15 18.5C15.3001 18.7776 16.1667 48.1667 17 62.5H1L0.5 0.5H7.5L8 11C9.33335 10.8334 11.9 10.6 11.5 11C11.1 11.4 11.3333 16.6667 11.5 19.5C11.5 19.5 14.6999 18.2224 15 18.5Z' />
       </svg>

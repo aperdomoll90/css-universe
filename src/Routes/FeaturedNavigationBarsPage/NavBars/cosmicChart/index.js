@@ -13,13 +13,17 @@ function CosmicChart() {
       {/* >>>>>>>  Star system >>>>>>> */}
       <div className='outerOrbit dashedChart'>
         <div className='planet'>
-          <PlanetCard size='--planetSize' />
+          <div className='planetRotation'>
+            <PlanetCard size='--planetSize' />
+          </div>
           <div className='planetOrbit dashedChart' />
         </div>
 
         <div className='innerOrbit dashedChart'>
           <div className='planet'>
+          <div className='innerOrbitPlanetRotation'>
             <PlanetCard size='--planetSize' />
+          </div>
             <div className='planetOrbit planetOrbitSecondary dashedChart' />
           </div>
 

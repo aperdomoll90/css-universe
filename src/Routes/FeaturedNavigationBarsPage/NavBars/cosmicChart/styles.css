@@ -1,6 +1,6 @@
 :root {
   --sunSize: 6vh;
-  --sunCoreSize: calc(var(--sunSize) - 1rem);
+  --sunCoreSize: calc(var(--sunSize) - 1.2rem);
   --moonSize: calc(var(--planetSize) / 3.5);
   --planetSize: calc(var(--sunSize) - 1vh);
 
@@ -15,6 +15,7 @@
   --innerOrbitalTime: 55s;
   --outerOrbitalTime: calc(var(--innerOrbitalTime) * 2);
   --planetOrbitalTime: 12s;
+  --planetAntiOrbitalTime: calc(var(--innerOrbitalTime) / 1.5);
 
   --dashedChartColor: #ffffff86;
   --centerSunColor: #f9dc96;
@@ -34,7 +35,7 @@
 
 .navigationChart {
   width: 100vw;
-  height: 55vh;
+  height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -58,12 +59,15 @@
 .outerOrbit {
   width: var(--outerOrbitSize);
   height: var(--outerOrbitSize);
+  border-radius: 50%;
+  margin-top: 10vh;
   animation: orbitalMovement var(--outerOrbitalTime) linear infinite;
 }
 
 .planet {
   width: var(--planetSize);
   height: var(--planetSize);
+  border-radius: 50%;
   position: absolute;
   top: calc((var(--planetSize) * -1) / 2);
   background: var(--planetColor);
@@ -73,15 +77,26 @@
   /* box-shadow: 0 0 0 2px var(--planetDarkColor), 0 0 0 4px var(--planetMiddleColor),0 0 0 8px var(--planetLightColor); */
 }
 
+.planetRotation{
+  position: absolute;
+  animation: antiOrbitalMovement var(--outerOrbitalTime) linear infinite;
+}
+.innerOrbitPlanetRotation{
+  position: absolute;
+  animation: antiOrbitalMovement var(--planetAntiOrbitalTime) linear infinite;
+  
+}
+
 .rougePlanetSystem {
   position: absolute !important;
-  top: 1.5rem !important;
-  left: 1.5rem;
+  top: 3rem !important;
+  left: 3rem;
 }
 
 .planetOrbit {
   min-width: var(--planetOrbitSize);
   min-height: var(--planetOrbitSize);
+  border-radius: 50%;
   position: relative;
   animation: orbitalMovement var(--planetOrbitalTime) linear infinite;
 }
@@ -105,18 +120,21 @@
 .innerOrbit {
   width: var(--innerOrbitSize);
   height: var(--innerOrbitSize);
+  border-radius: 50%;
   animation: orbitalMovement var(--innerOrbitalTime) linear infinite;
 }
 
 .sun {
   width: var(--sunSize);
   height: var(--sunSize);
+  border-radius: 50%;
   position: relative;
 }
 
 .sunCore {
   width: var(--sunCoreSize);
   height: var(--sunCoreSize);
+  border-radius: 50%;
   position: absolute;
   z-index: 11;
   background: #f9dc96;
@@ -150,6 +168,15 @@
   }
 }
 
+@keyframes antiOrbitalMovement {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 @keyframes haloMovement {
   0% {
     transform: rotate(360deg);
@@ -162,16 +189,21 @@
 /* // Large devices (desktops, 992px and up)  */
 @media (min-width: 992px) {
   :root {
-    --sunSize: 9.7vh;
+    --sunSize: 12vh;
     --innerOrbitSize: calc(var(--sunSize) + var(--planetOrbitSize) + 9vh);
-    --planetSize: calc(var(--sunSize) - 1.8vh);
+    --outerOrbitSize: calc(var(--innerOrbitSize) * 1.8);
+    --planetSize: calc(var(--sunSize) - 1.4vh);
     --planetOrbitSize: calc(var(--planetSize) + 3.5rem);
-    --outerOrbitSize: calc(var(--innerOrbitSize) * 2.2);
   }
 
   .navigationChart {
     width: 65vw;
-    height: 90vh;
+    height: 95vh;
+  }
+
+  .outerOrbit {
+    margin-top: 2vh !important;
+    margin-left: 10vw !important;
   }
 
   .planetOrbit::before {

@@ -7,6 +7,7 @@ import HikerParallax from '../../Routes/FeaturedParallaxPage/ParallaxCollection/
 function Hero() {
   return (
     <div className='heroArea'>
+      <div className='heroShadow' />
       <div className='NavContainer'>
         <div className='mainLogo'>
           <span>css</span>forge

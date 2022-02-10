@@ -1,8 +1,13 @@
 :root{
     --twinkleSVGSize:3.5rem;
 
-    --twinklingSkyBackgroundColor:#000013;
-    --twinklingSkySVGColor:#000013f1;
+    --twinklingSkyBackgroundColor:#01001f;
+    --twinklingSkySVGColor:#01001ff1;
+    
+    --twinklingSkyDarkGradientColor:#00000a;
+    --twinklingSkyDarkGradientTranspColor:#00000ab9;
+    /* --twinklingSkySVGColor:#01001ff1; */
+
 
     --twinklingTime:10s;
 
@@ -61,6 +66,16 @@ StarrySky {
 }
 
 
+.skyGradientFilter {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  z-index: 20;
+  background: linear-gradient(to bottom, var(--twinklingSkyDarkGradientTranspColor) 5%, transparent), linear-gradient(45deg, var(--twinklingSkyDarkGradientTranspColor), transparent);
+
+}
 
  i {
     width: var(--twinkleSVGSize);

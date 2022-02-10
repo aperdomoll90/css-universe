@@ -7,6 +7,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.heroShadow {
+  height: 170px;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  z-index: 20;
+  background: linear-gradient(to top, var(--twinklingSkyDarkGradientColor), transparent);
+}
 /* sets section as its own container  */
 
 .heroArea:before {

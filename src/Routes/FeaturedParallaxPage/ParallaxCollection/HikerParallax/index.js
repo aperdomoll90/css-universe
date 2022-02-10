@@ -15,7 +15,7 @@ function HikerParallax() {
 
       const translate = document.querySelectorAll('.translate')
       const backgroundMountain = document.querySelector('.backgroundMountain')
-      const shadow = document.querySelector('.shadow')
+      const shadow = document.querySelector('.heroShadow')
 
       // >>>>>>>>>>>>>>>>>>> TRANSLATE Y
       translate.forEach(element => {
@@ -25,7 +25,7 @@ function HikerParallax() {
 
       // <<<<<<<<<<<<<<<<<<<< HEIGHT
       if (shadow) {
-        shadow.style.height = `${scroll * 0.5 + 170}px`
+        shadow.style.height = `${scroll * 0.5 + 270}px`
       }
 
       // <<<<<<<<<<<<<<<<<<<< WIDTH
