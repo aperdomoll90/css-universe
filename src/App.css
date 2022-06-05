@@ -86,6 +86,7 @@ html {
 }
 
 .App {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,10 +112,7 @@ html {
     background-position: 0% 50%;
   }
 } */
-.test {
-  min-width: 100vw;
-  min-height: 100vw;
-}
+
 .container {
   max-width: 95rem;
   padding: 0 2rem;

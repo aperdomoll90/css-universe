@@ -8,12 +8,14 @@
 #universe3D-wrapper canvas {
   position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   color: #ffffffaf;
 }
 
 .space-scroll-content {
-  position: absolute;
+  position: sticky;
 }
 .space-scroll-content section {
   height: 100vh;
@@ -26,4 +28,11 @@
 .space-scroll-content section p {
   color: #ffffffaf;
   font-size: 4rem;
+}
+
+.sectionSpace{
+  transition: .5s;
+}
+.sectionAnimationOpacity {
+background: red;
 }
