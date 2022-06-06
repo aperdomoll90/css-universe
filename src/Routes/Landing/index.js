@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import './styles.css'
+import RouteWrapper from '../../Components/RouteWrapper'
 
-import SolarSystem from '../../Components/SolarSystem'
+import SolarSystem from '../../Archives/SolarSystem'
 
 const hiker = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2Fhiker.png?alt=media&token=f5c535a2-55a9-413a-a0cd-852885d45205'
 const plane2 = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2Fplane2.png?alt=media&token=7ddaf0a7-fd3b-4d72-a745-fd82bbf506d9'
@@ -22,47 +23,47 @@ function Landing() {
 
       //********* GET the height of the Container Section
       const header = document.querySelector('.landing-Parallax') // ***(Selects Section that Contains the component)
-     if (header){
-      let header_height = header.offsetHeight //***( Finds the Height Value of set Section)
-         //****** Alter opacity
-         shadow && (shadow.style.opacity = -scroll / (header_height / 2) + 1)
-         indicator && (indicator.style.opacity = -scroll / (header_height / 2) + 1)
-     }
-     
-
-      // >>>>>>>>>>>>>>>>>>> TRANSLATE X and or Y
-      hiker.style.transform = `translateY(${scroll * 1.5}px)`
-      plane2.style.transform = `translateX(${scroll * 0.4}px) translateY(${scroll * 1}px)`
-      plane3.style.transform = `translateX(${scroll * -0.4}px) translateY(${scroll * 1}px)`
-      backgroundMountain.style.transform = `translateX(${scroll * -1.5}px) translateY(${scroll * 0.8}px)`
-
-   
-      
-      // // >>>>>>> Menu Animation
-
-    const sectionSpace = document.querySelectorAll('.content-section')
-
-    const sectionObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          entry.target.classList.toggle('sectionAnimationOpacity', entry.isIntersecting)
-          // if (entry.isIntersecting) sectionObserver.unobserve(entry.target)
-        })
-      },
-      {
-        threshold: 1,
-        // rootMargin: '5%',
+      if (header) {
+        let header_height = header.offsetHeight //***( Finds the Height Value of set Section)
+        //****** Alter opacity
+        shadow && (shadow.style.opacity = -scroll / (header_height / 2) + 1)
+        indicator && (indicator.style.opacity = -scroll / (header_height / 2) + 1)
       }
-    )
+      // >>>>>>>>>>>>>>>>>>> TRANSLATE X and or Y
+      if (hiker) {
+        hiker.style.transform = `translateY(${scroll * 1.5}px)`
+      }
+      if (plane2) {
+        plane2.style.transform = `translateX(${scroll * 0.4}px) translateY(${scroll * 1}px)`
+      }
+      if (hiker) {
+        plane3.style.transform = `translateX(${scroll * -0.4}px) translateY(${scroll * 1}px)`
+      }
+      if (backgroundMountain) {
+        backgroundMountain.style.transform = `translateX(${scroll * -1.5}px) translateY(${scroll * 0.8}px)`
+      }
+    })
+    // const sectionSpace = document.querySelectorAll('.content-section')
 
-    sectionSpace.forEach(card => {
-      sectionObserver.observe(card)
-    })
-    
-    })
+    // const sectionObserver = new IntersectionObserver(
+    //   entries => {
+    //     entries.forEach(entry => {
+    //       entry.target.classList.toggle('sectionAnimationOpacity', entry.isIntersecting)
+    //       // if (entry.isIntersecting) sectionObserver.unobserve(entry.target)
+    //     })
+    //   },
+    //   {
+    //     threshold: 1,
+    //     rootMargin: '5%',
+    //   }
+    // )
+
+    // sectionSpace.forEach(card => {
+    //   sectionObserver.observe(card)
+    // })
   }, [])
   return (
-    <div className='route-wrapper'>
+    <RouteWrapper>
       <div className='landing-Parallax'>
         <img src={hiker} className='hiker contentOnLoadAnimation' data-speed='1.5' alt='hiker' />
         <img src={plane2} className='plane2  contentOnLoadAnimation' data-speed='1.1' alt='mountain forest' />
@@ -84,7 +85,7 @@ function Landing() {
           Hope you enjoy them, as much as I enjoyed creating them!
         </p>
       </section>
-    </div>
+    </RouteWrapper>
   )
 }
 

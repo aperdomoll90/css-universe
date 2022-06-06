@@ -13,7 +13,7 @@
 /* >>>>>>>>>>>>>>>>>> Global Sections <<<<<<<<<<<<<<<<<<<<< */
 #SvgPathOnScrollWrapper {
   position: relative;
-  height: 580vh;
+  min-height: 500vh;
   margin: 0;
   background: var(--white);
   overflow: hidden;

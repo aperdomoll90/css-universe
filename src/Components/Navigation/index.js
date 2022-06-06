@@ -20,42 +20,42 @@ function CircularNav() {
           </div>
           <li style={{ '--i': 0 }}>
             <Link to='/'>
-              <ion-icon name='home-outline'></ion-icon>
+              <ion-icon name='home-outline' />
             </Link>
           </li>
           <li style={{ '--i': 1 }}>
             <Link to='/loaders'>
-              <ion-icon name='logo-electron'></ion-icon>
+              <ion-icon name='logo-electron' />
             </Link>
           </li>
           <li style={{ '--i': 2 }}>
             <Link to='/forms'>
-              <ion-icon name='bar-chart-outline'></ion-icon>
+              <ion-icon name='bar-chart-outline' />
             </Link>
           </li>
           <li style={{ '--i': 3 }}>
             <Link to='/navs'>
-              <ion-icon name='map-outline'></ion-icon>
+              <ion-icon name='map-outline' />
             </Link>
           </li>
           <li style={{ '--i': 4 }}>
             <Link to='/effects'>
-              <ion-icon name='code-working-outline'></ion-icon>
+              <ion-icon name='code-working-outline' />
             </Link>
           </li>
           <li style={{ '--i': 5 }}>
             <Link to='/creatures'>
-              <ion-icon name='paw-outline'></ion-icon>
+              <ion-icon name='paw-outline' />
             </Link>
           </li>
           <li style={{ '--i': 6 }}>
             <Link to='/parallax'>
-              <ion-icon name='settings-outline'></ion-icon>
+              <ion-icon name='settings-outline' />
             </Link>
           </li>
           <li style={{ '--i': 7 }}>
             <Link to='/3d'>
-              <ion-icon name='planet-outline'></ion-icon>
+              <ion-icon name='planet-outline' />
             </Link>
           </li>
         </div>

@@ -1,11 +1,13 @@
-import SvgPathOnScroll from './ParallaxCollection/SvgPathOnScroll'
+
+import RouteWrapper from '../../Components/RouteWrapper'
 import './styles.css'
+import SvgPathOnScroll from '../../Archives/ParallaxCollection/SvgPathOnScroll'
 
 function FeaturedParallaxPage() {
   return (
-    <div id='featureParallaxBackground'>
+    <RouteWrapper>
       <SvgPathOnScroll/>
-    </div>
+    </RouteWrapper>
   )
 }
 

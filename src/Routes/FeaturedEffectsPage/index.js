@@ -1,5 +1,5 @@
-import BouncyLine from './Effects/BouncyLine'
-import ChangingColorOnMouseOver from './Effects/ChangingColorOnMouseOver'
+import BouncyLine from '../../Archives/Effects/BouncyLine'
+import ChangingColorOnMouseOver from '../../Archives/Effects/ChangingColorOnMouseOver'
 import './styles.css'
 
 function FeaturedEffectsPage() {

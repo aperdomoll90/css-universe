@@ -125,12 +125,6 @@ function SolarSystem() {
         ringMesh.rotation.x = -0.5 * Math.PI
       }
 
-      // >>>>>>>>>>>>>  create orbit
-      const orbitGeometry = new THREE.RingGeometry(position, position + 0.05, 62)
-      const orbitMaterial = new THREE.MeshStandardMaterial({ color: 0x000000, side: THREE.DoubleSide })
-      const orbitTrack = new THREE.Mesh(orbitGeometry, orbitMaterial)
-      orbit.add(orbitTrack)
-      orbitTrack.rotation.x = -0.5 * Math.PI
 
       scene.add(orbit)
       planet.position.x = position

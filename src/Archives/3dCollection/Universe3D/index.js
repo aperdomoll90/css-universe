@@ -1,6 +1,7 @@
 import './styles.css'
 import { useEffect } from 'react'
 import * as THREE from 'three'
+import RouteWrapper from '../../../Components/RouteWrapper'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import background from './media/space.jpeg'
