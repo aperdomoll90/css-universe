@@ -11,37 +11,23 @@
   overflow: hidden;
 }
 
-.hiker {
-  height: 55vh;
+.parallax-image {
+  width: 100vw;
   position: absolute;
-  bottom: -80px;
-  left: -100px;
+  bottom: 0px;
+  left: 0px;
   z-index: 10;
 }
 
-.plane2 {
-  width: 200vw;
+.layerOne {
+  width: 100vw;
   position: absolute;
-  bottom: -45vh;
-  right: -15vw;
-  z-index: 8;
+  bottom: -50px;
+  left: 0px;
+  z-index: 10;
 }
 
-.plane3 {
-  width: 200vw;
-  position: absolute;
-  bottom: 15vh;
-  left: 0;
-  z-index: 7;
-}
 
-.backgroundMountain {
-  width: 250vw;
-  position: absolute;
-  top: 5rem;
-  left: -20vw;
-  z-index: 5;
-}
 
 .landing-bottom-shadow {
   height: 170px;
@@ -92,27 +78,6 @@
 
 /* // Large devices (desktops, 992px and up)  */
 @media (min-width: 992px) {
-  .hiker {
-    height: 65vh;
-    bottom: -15%;
-    left: 0;
-  }
-  .plane2 {
-    width: 100vw;
-    bottom: -115%;
-    right: 0;
-  }
-
-  .plane3 {
-    width: 100vw;
-    bottom: -25%;
-  }
-
-  .backgroundMountain {
-    width: 100vw;
-    top: 3rem;
-    left: -10vw;
-  }
 
   .site-intro-paragraph {
     max-width: 31vw;
@@ -125,9 +90,8 @@
 
 .contentOnLoadAnimation {
   opacity: 1;
-  /* animation: onLoadContent var(--coverAnimationTime);
-  animation-delay: var(--standardAnimationTime);
-  animation-fill-mode: forwards; */
+  animation: solar-system-content-section-animation 1.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 

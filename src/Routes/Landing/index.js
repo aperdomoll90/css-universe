@@ -3,21 +3,25 @@ import './styles.css'
 import RouteWrapper from '../../Components/RouteWrapper'
 
 import SolarSystem from '../../Archives/SolarSystem'
+import layerOne from './media/layerOne.svg'
+import layerTwo from './media/layerTwo.svg'
+import layerThree from './media/layerThree.svg'
+import layerFour from './media/layerFour.svg'
+import layerFive from './media/layerFive.svg'
+import layerSix from './media/layerSix.svg'
+import layerSeven from './media/layerSeven.svg'
+import layerEight from './media/layerEight.svg'
+import layerNine from './media/layerNine.svg'
+import layerTen from './media/layerTen.svg'
+import layerEleven from './media/layerEleven.svg'
+import layerTwelve from './media/layerTwelve.svg'
 
-const hiker = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2Fhiker.png?alt=media&token=f5c535a2-55a9-413a-a0cd-852885d45205'
-const plane2 = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2Fplane2.png?alt=media&token=7ddaf0a7-fd3b-4d72-a745-fd82bbf506d9'
-const plane3 = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2Fplane3.png?alt=media&token=9e7bc464-5270-4e28-a4fb-b08e67d65359'
-const backgroundMountain = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2Fplane4.png?alt=media&token=4d2c89ac-dfac-469b-a272-add271a7ac0f'
 
 function Landing() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       let scroll = window.pageYOffset
 
-      const hiker = document.querySelector('.hiker')
-      const plane2 = document.querySelector('.plane2')
-      const plane3 = document.querySelector('.plane3')
-      const backgroundMountain = document.querySelector('.backgroundMountain')
       const shadow = document.querySelector('.landing-bottom-shadow')
       const indicator = document.querySelector('.landing-scroll-indicator')
 
@@ -30,19 +34,12 @@ function Landing() {
         indicator && (indicator.style.opacity = -scroll / (header_height / 2) + 1)
       }
       // >>>>>>>>>>>>>>>>>>> TRANSLATE X and or Y
-      if (hiker) {
-        hiker.style.transform = `translateY(${scroll * 1.5}px)`
-      }
-      if (plane2) {
-        plane2.style.transform = `translateX(${scroll * 0.4}px) translateY(${scroll * 1}px)`
-      }
-      if (hiker) {
-        plane3.style.transform = `translateX(${scroll * -0.4}px) translateY(${scroll * 1}px)`
-      }
-      if (backgroundMountain) {
-        backgroundMountain.style.transform = `translateX(${scroll * -1.5}px) translateY(${scroll * 0.8}px)`
-      }
-    })
+      const translate = document.querySelectorAll('.landing-translate')
+
+       translate.forEach(element => {
+        let speed = element.dataset.speed
+        element.style.transform = `translateY(${scroll * speed}px)`
+      })
     // const sectionSpace = document.querySelectorAll('.content-section')
 
     // const sectionObserver = new IntersectionObserver(
@@ -60,15 +57,29 @@ function Landing() {
 
     // sectionSpace.forEach(card => {
     //   sectionObserver.observe(card)
-    // })
+    })
   }, [])
   return (
     <RouteWrapper>
       <div className='landing-Parallax'>
-        <img src={hiker} className='hiker contentOnLoadAnimation' data-speed='1.5' alt='hiker' />
+        {/* <img src={hiker} className='hiker contentOnLoadAnimation' data-speed='1.5' alt='hiker' />
         <img src={plane2} className='plane2  contentOnLoadAnimation' data-speed='1.1' alt='mountain forest' />
         <img src={plane3} className='plane3  contentOnLoadAnimation' data-speed='0.67' alt='medium mountain' />
-        <img src={backgroundMountain} className='backgroundMountain  contentOnLoadAnimation' alt='High mountain peeks covered in snow' />
+        <img src={backgroundMountain} className='backgroundMountain  contentOnLoadAnimation' alt='High mountain peeks covered in snow' /> */}
+
+        <img src={layerTwelve} className='layerTwelve contentOnLoadAnimation landing-translate parallax-image' data-speed='1.2' alt='layer' />
+        <img src={layerEleven} className='layerEleven contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerTen} className='layerTen contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerNine} className='layerNine contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerEight} className='layerEight contentOnLoadAnimation landing-translate parallax-image' data-speed='2' alt='layer' />
+        <img src={layerSix} className='layerSix contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerFive} className='layerFive contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerSeven} className='layerSeven contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerFour} className='layerFour contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerThree} className='layerThree contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
+        <img src={layerTwo} className='layerTwo contentOnLoadAnimation landing-translate parallax-image' data-speed='1.2' alt='layer' />
+        <img src={layerOne} className='layerOne contentOnLoadAnimation landing-translate parallax-image' data-speed='.5' alt='hiker' />
+
         <p className='landing-scroll-indicator'>SCROLL</p>
         <div className='landing-bottom-shadow' />
         <SolarSystem />
