@@ -12,22 +12,26 @@
 }
 
 .parallax-image {
-  width: 100vw;
+  width: 350vw;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  z-index: 10;
+  z-index: var(--index);
 }
 
-.layerOne {
-  width: 100vw;
-  position: absolute;
-  bottom: -50px;
-  left: 0px;
-  z-index: 10;
+.layerTwo{
+  left: -12rem;
+  bottom: -1rem;
+
+}
+.layerSeven{
+  left: -22rem;
 }
 
+.layerEight{
+  left: -22rem;
 
+}
 
 .landing-bottom-shadow {
   height: 170px;
@@ -78,7 +82,11 @@
 
 /* // Large devices (desktops, 992px and up)  */
 @media (min-width: 992px) {
-
+  .parallax-image {
+    width: 100vw;
+    bottom: 0px;
+    left: 0px;
+  }
   .site-intro-paragraph {
     max-width: 31vw;
     font-size: 1.2rem;
@@ -102,12 +110,12 @@
 
 @keyframes solar-system-content-section-animation {
   0% {
-    /* transform: translateX(5rem); */
+    transform: translateY(1rem);
     opacity: 0;
 
   }
   100% {
-    /* transform: translateX(0); */
+    transform: translateY(0);
     opacity: 1;
   }
 }

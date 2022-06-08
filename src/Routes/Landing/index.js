@@ -62,23 +62,19 @@ function Landing() {
   return (
     <RouteWrapper>
       <div className='landing-Parallax'>
-        {/* <img src={hiker} className='hiker contentOnLoadAnimation' data-speed='1.5' alt='hiker' />
-        <img src={plane2} className='plane2  contentOnLoadAnimation' data-speed='1.1' alt='mountain forest' />
-        <img src={plane3} className='plane3  contentOnLoadAnimation' data-speed='0.67' alt='medium mountain' />
-        <img src={backgroundMountain} className='backgroundMountain  contentOnLoadAnimation' alt='High mountain peeks covered in snow' /> */}
 
-        <img src={layerTwelve} className='layerTwelve contentOnLoadAnimation landing-translate parallax-image' data-speed='1.2' alt='layer' />
-        <img src={layerEleven} className='layerEleven contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerTen} className='layerTen contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerNine} className='layerNine contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerEight} className='layerEight contentOnLoadAnimation landing-translate parallax-image' data-speed='2' alt='layer' />
-        <img src={layerSix} className='layerSix contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerFive} className='layerFive contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerSeven} className='layerSeven contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerFour} className='layerFour contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerThree} className='layerThree contentOnLoadAnimation landing-translate parallax-image' data-speed='1.5' alt='layer' />
-        <img src={layerTwo} className='layerTwo contentOnLoadAnimation landing-translate parallax-image' data-speed='1.2' alt='layer' />
-        <img src={layerOne} className='layerOne contentOnLoadAnimation landing-translate parallax-image' data-speed='.5' alt='hiker' />
+        <img style={{'--index':1}} src={layerTwelve} className='layerTwelve landing-translate parallax-image' data-speed='1.2'  alt='brown mountain range' />
+        <img style={{'--index':2}} src={layerEleven} className='layerEleven landing-translate parallax-image' data-speed='1.5'  alt='cream mountain range' />
+        <img style={{'--index':3}} src={layerTen} className='layerTen landing-translate parallax-image' data-speed='1.5'  alt='tan mountain range' />
+        <img style={{'--index':4}} src={layerNine} className='layerNine landing-translate parallax-image' data-speed='1.5'  alt='blue lake in a mountain range' />
+        <img style={{'--index':5}} src={layerEight} className='layerEight landing-translate parallax-image' data-speed='2'  alt='orange mountain range' />
+        <img style={{'--index':6}} src={layerSeven} className='layerSeven landing-translate parallax-image' data-speed='1.5' alt='brown mountain range' />
+        <img style={{'--index':7}} src={layerSix} className='layerSix landing-translate parallax-image' data-speed='1.5'  alt='salmon mountain range' />
+        <img style={{'--index':8}} src={layerFive} className='layerFive landing-translate parallax-image' data-speed='1.5'  alt='grey mountain range' />
+        <img style={{'--index':9}} src={layerFour} className='layerFour landing-translate parallax-image' data-speed='1.5' alt='green mountain range' />
+        <img style={{'--index':10}} src={layerThree} className='layerThree landing-translate parallax-image' data-speed='1.5' alt='light blue mountain range' />
+        <img style={{'--index':11}} src={layerTwo} className='layerTwo landing-translate parallax-image' data-speed='1.2' alt='rocks' />
+        <img style={{'--index':12}} src={layerOne} className='layerOne landing-translate parallax-image' data-speed='.5' alt='girl looking through a telescope' />
 
         <p className='landing-scroll-indicator'>SCROLL</p>
         <div className='landing-bottom-shadow' />
