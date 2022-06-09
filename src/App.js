@@ -9,7 +9,7 @@ import FeaturedNavigationBarsPage from './Routes/FeaturedNavigationBarsPage/'
 import FeaturedEffectsPage from './Routes/FeaturedEffectsPage'
 import FeaturedLoadersPage from './Routes/FeaturedLoadersPage/'
 import FeaturedCreaturesPage from './Routes/FeaturedCreaturesPage/'
-import Featured3DCSSPage from './Archives/3dCollection/Universe3D'
+import Featured3DCSSPage from './Routes/Featured3DCSSPage'
 import FeaturedParallaxPage from './Routes/FeaturedParallaxPage'
 
 function App() {

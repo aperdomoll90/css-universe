@@ -14,3 +14,19 @@
     right: 0;
     color: #ffffffaf;
   }
+
+  #solarSystem-wrapper p{
+    font-size: 1rem;
+    color: white;
+    height: 5rem;
+    width: 30rem;
+    position: absolute;
+    top: 80%;
+    left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.286);
+  }

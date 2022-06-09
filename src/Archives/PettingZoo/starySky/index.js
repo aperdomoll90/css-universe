@@ -35,7 +35,6 @@ export default function StarrySky() {
   return (
     <div className='StarrySky'>
       <div class='stars'></div>
-      <div className="skyGradientFilter"></div>
       <div class='clouds'></div>
     </div>
   )

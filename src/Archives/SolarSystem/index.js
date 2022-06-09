@@ -52,14 +52,15 @@ function SolarSystem() {
     const far = 1000
     const perspectiveCamera = new THREE.PerspectiveCamera(fov, aspect, near, far)
     const camera = perspectiveCamera
-    camera.position.set(650, 940, 650)
+    camera.position.set(-250, 140, 240)
     scene.add(camera)
 
-    const cameraTrack = new THREE.CubicBezierCurve3(new THREE.Vector3(650, 940, 650), new THREE.Vector3(-450, 140, 440))
+    // const cameraTrack = new THREE.CubicBezierCurve3(new THREE.Vector3(650, 940, 650), new THREE.Vector3(-450, 140, 440))
 
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> helper tools <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     const controls = new OrbitControls(camera, renderer.domElement)
+      controls.target.set(-44.019061742668356, -4.426043710749285, -23.87192455239471)
 
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Scenery <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -261,16 +262,13 @@ function SolarSystem() {
     }
     animate()
 
-    function moveCamera() {
-      const t = window.pageYOffset
-      const cameraPos = cameraTrack.getPoint(t * 0.00055)
-      camera.position.set(cameraPos.x, cameraPos.y, cameraPos.z)
-      controls.target.set(-44.019061742668356, -4.426043710749285, -23.87192455239471)
-      // camera.rotate.z = t * -0.5
-      // controls.target.set(-550, 550, 0);
-      // console.log('controls.target', controls)
-    }
-    document.body.onscroll = moveCamera
+    // function moveCamera() {
+    //   const t = window.pageYOffset
+    //   const cameraPos = cameraTrack.getPoint(t * 0.00055)
+    //   camera.position.set(cameraPos.x, cameraPos.y, cameraPos.z)
+    //   controls.target.set(-44.019061742668356, -4.426043710749285, -23.87192455239471)
+    // }
+    // document.body.onscroll = moveCamera
 
     window.addEventListener('resize', function () {
       camera.aspect = window.innerWidth / window.innerHeight
@@ -281,6 +279,7 @@ function SolarSystem() {
 
   return (
     <div id='solarSystem-wrapper'>
+      <p> Try controlling me with your pad or mouse... </p>
       <canvas id='bg'></canvas>
     </div>
   )

@@ -2,7 +2,10 @@ import { useEffect } from 'react'
 import './styles.css'
 import RouteWrapper from '../../Components/RouteWrapper'
 
-import SolarSystem from '../../Archives/SolarSystem'
+
+import StarrySky from '../../Archives/PettingZoo/starySky'
+import CosmicChart from '../../Archives/cosmicChart'
+
 import layerOne from './media/layerOne.svg'
 import layerTwo from './media/layerTwo.svg'
 import layerThree from './media/layerThree.svg'
@@ -15,6 +18,7 @@ import layerNine from './media/layerNine.svg'
 import layerTen from './media/layerTen.svg'
 import layerEleven from './media/layerEleven.svg'
 import layerTwelve from './media/layerTwelve.svg'
+
 
 
 function Landing() {
@@ -40,23 +44,6 @@ function Landing() {
         let speed = element.dataset.speed
         element.style.transform = `translateY(${scroll * speed}px)`
       })
-    // const sectionSpace = document.querySelectorAll('.content-section')
-
-    // const sectionObserver = new IntersectionObserver(
-    //   entries => {
-    //     entries.forEach(entry => {
-    //       entry.target.classList.toggle('sectionAnimationOpacity', entry.isIntersecting)
-    //       // if (entry.isIntersecting) sectionObserver.unobserve(entry.target)
-    //     })
-    //   },
-    //   {
-    //     threshold: 1,
-    //     rootMargin: '5%',
-    //   }
-    // )
-
-    // sectionSpace.forEach(card => {
-    //   sectionObserver.observe(card)
     })
   }, [])
   return (
@@ -78,7 +65,6 @@ function Landing() {
 
         <p className='landing-scroll-indicator'>SCROLL</p>
         <div className='landing-bottom-shadow' />
-        <SolarSystem />
       </div>
 
       <section className='content-section'>
@@ -91,7 +77,11 @@ function Landing() {
           <br />
           Hope you enjoy them, as much as I enjoyed creating them!
         </p>
+
+  <CosmicChart/>
+  <StarrySky/>
       </section>
+  <StarrySky/>
     </RouteWrapper>
   )
 }

@@ -1,6 +1,6 @@
 import './styles.css'
 import halo from './cosmicImages/halo.svg'
-import PlanetCard from '../../../FeaturedCreaturesPage/PettingZoo/planetCard'
+import PlanetCard from './planetCard'
 
 function CosmicChart() {
   return (

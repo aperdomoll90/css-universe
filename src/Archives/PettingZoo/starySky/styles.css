@@ -65,18 +65,6 @@ StarrySky {
   z-index: 0;
 }
 
-
-.skyGradientFilter {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  left: 0;
-  z-index: 20;
-  background: linear-gradient(to bottom, var(--twinklingSkyDarkGradientTranspColor) 5%, transparent), linear-gradient(45deg, var(--twinklingSkyDarkGradientTranspColor), transparent);
-
-}
-
  i {
     width: var(--twinkleSVGSize);
     height: var(--twinkleSVGSize);
