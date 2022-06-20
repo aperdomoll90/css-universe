@@ -1,4 +1,3 @@
-
 .landing-Parallax {
   width: 100vw;
   height: 100vh;
@@ -20,18 +19,16 @@
   z-index: var(--index);
 }
 
-.layerTwo{
+.layerTwo {
   left: -12rem;
   bottom: -1rem;
-
 }
-.layerSeven{
+.layerSeven {
   left: -22rem;
 }
 
-.layerEight{
+.layerEight {
   left: -22rem;
-
 }
 
 .landing-bottom-shadow {
@@ -68,8 +65,12 @@
   align-items: flex-end;
   justify-content: flex-end;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 0;
+}
+
+.content-section-to-front {
+  z-index: 100;
 }
 .site-intro-paragraph {
   max-width: 80vw;
@@ -104,7 +105,6 @@
   animation-fill-mode: forwards;
 }
 
-
 .sectionAnimationOpacity {
   animation: solar-system-content-section-animation 2s;
   animation-fill-mode: forwards;
@@ -114,7 +114,6 @@
   0% {
     transform: translateY(1rem);
     opacity: 0;
-
   }
   100% {
     transform: translateY(0);

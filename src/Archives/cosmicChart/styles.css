@@ -41,7 +41,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: 50;
+  z-index: 100;
 }
 
 .navigationChart * {
@@ -80,11 +80,12 @@
 .planetRotation{
   position: absolute;
   animation: antiOrbitalMovement var(--outerOrbitalTime) linear infinite;
+  z-index: 100;
 }
 .innerOrbitPlanetRotation{
   position: absolute;
   animation: antiOrbitalMovement var(--planetAntiOrbitalTime) linear infinite;
-  
+  z-index: 100;
 }
 
 .rougePlanetSystem {

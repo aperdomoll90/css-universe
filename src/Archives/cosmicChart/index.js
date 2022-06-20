@@ -1,6 +1,7 @@
 import './styles.css'
 import halo from './cosmicImages/halo.svg'
 import PlanetCard from './planetCard'
+import { Link } from 'react-router-dom'
 
 function CosmicChart() {
   return (
@@ -26,7 +27,7 @@ function CosmicChart() {
           </div>
             <div className='planetOrbit planetOrbitSecondary dashedChart' />
           </div>
-
+          <Link to='/3d'>
           <div className='sun'>
             <svg className='outerHalo' viewBox='0 0 128 130' preserveAspectRatio='xMidYMax meet'>
               <path
@@ -44,6 +45,7 @@ function CosmicChart() {
             </svg>
             <div className='sunCore' />
           </div>
+          </Link>
         </div>
       </div>
     </div>
