@@ -1,4 +1,4 @@
-import SkillBar from './FormsAndGraphics/SkillBar'
+import SkillBar from '../../Archives/SkillBar'
 import './styles.css'
 
 function FeaturedFormsPage() {

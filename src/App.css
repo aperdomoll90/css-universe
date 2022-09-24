@@ -5,6 +5,66 @@
   box-sizing: border-box;
 }
 
+
+:root {
+
+  --backgroundColor:#000013;
+  --logoColor: #887850;
+
+  
+  --white: #fff;
+  --seaWhiteTransp: rgba(255, 255, 255, 0.774);
+
+  --black: #000;
+  --blackTransp:rgba(0, 0, 0, 0.26);
+  --heroBlackTransp:rgba(0, 0, 0, 0.109);
+  --seaBlackTransp: rgba(0, 0, 0, 0.589);
+
+  --seaBlue: #0f1a43;
+  --seaLightBlue: #5d7fd6;
+  --seaPaleBlue:#DFEDF3;
+
+  --seaGreen: #ae9861;
+  --seaOrange: #dd5700;
+
+  --seaRed: #e20953;
+  --seaPaleRed: #e20953;
+
+
+  /* >>>>>> SEA ANIMATION TIMES <<<<<<<<<< */
+  --coverAnimationTime: 2.5s;
+  --coverAnimationTimeExtended: 3s;
+  --standardAnimationTime:1s;
+  --standardRingAnimationTime:1.5s;
+  --firstDelayGroup: calc(var(--standardAnimationTime) - 0.5s);
+  --secondDelayGroup: var(--standardAnimationTime);
+  --thirdDelayGroup: calc(var(--standardAnimationTime) + 1s);
+}
+
+
+/* >>>>>>>>>>> ANIMATIONS <<<<<<<<<<<<< */
+@keyframes onLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes onLoadCover {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -26,13 +86,16 @@ html {
 }
 
 .App {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #151515;
-  /* background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(174, 250, 174, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-  background-size: 300% 300%;
+  padding: 0;
+  background: linear-gradient(to bottom, var(--backgroundColor) 25%, transparent),radial-gradient(ellipse at bottom right,#151e64, #050a32 15%, #000013 40%);
+   /* background-size: 300% 300%;
   animation: gradient 15s ease infinite; */
 }
 
@@ -52,10 +115,7 @@ html {
     background-position: 0% 50%;
   }
 } */
-.test {
-  min-width: 100vw;
-  min-height: 100vw;
-}
+
 .container {
   max-width: 95rem;
   padding: 0 2rem;

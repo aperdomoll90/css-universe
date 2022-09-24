@@ -1,7 +1,9 @@
+import SvgPathOnScroll from '../../Archives/ParallaxCollection/SvgPathOnScroll'
+
 import './styles.css'
-import CircularNav from './NavBars/CircularNav'
-import RollingBallNav from './NavBars/RollingBallNav'
-import HamburgerMenuToggle from './NavBars/HamburgerMenuToggle'
+import CircularNav from '../../Archives/NavBars/CircularNav'
+import RollingBallNav from '../../Archives/NavBars/RollingBallNav'
+import HamburgerMenuToggle from '../../Archives/NavBars/HamburgerMenuToggle'
 
 function NavigationBarsPage() {
   return (

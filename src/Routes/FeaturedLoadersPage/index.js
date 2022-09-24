@@ -1,5 +1,5 @@
-import FaeLoader from './Loaders/FaeLoader'
-import RainbowVinylLoader from './Loaders/RainbowVinylLoader'
+import FaeLoader from '../../Archives/Loaders/FaeLoader'
+import RainbowVinylLoader from '../../Archives/Loaders/RainbowVinylLoader'
 import './styles.css'
 
 function FeaturedLoadersPage() {

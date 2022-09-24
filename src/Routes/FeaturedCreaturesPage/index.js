@@ -1,7 +1,9 @@
+import RouteWrapper from '../../Components/RouteWrapper'
 import './styles.css'
 
 function FeaturedCreaturesPage() {
   return (
+    <RouteWrapper>
     <div className='featurePageBackground'>
       <div className='banner'>
         <div className='container'>
@@ -17,6 +19,7 @@ function FeaturedCreaturesPage() {
         </div>
       </div>
     </div>
+    </RouteWrapper>
   )
 }
 

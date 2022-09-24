@@ -1,0 +1,198 @@
+#OceanProducts {
+  background: var(--seaBlue);
+  /* z-index: 15; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+#OceanProducts p {
+  color: var(--white) !important;
+}
+
+.sectionFourContent {
+  width: 90%;
+  height: 8rem;
+  position: absolute;
+  top: 6rem;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-weight: 100;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sectionFourTittle {
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: 0.4rem;
+  color: var(--white) !important;
+  font-family: 'Times New Roman', serif;
+}
+
+.productCarousel {
+  width: 92%;
+  height: 30rem;
+  overflow: scroll;
+  position: absolute;
+  top: 15rem;
+  z-index: 15;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.productCarousel p {
+  color: var(--white) !important;
+  font-weight: 100;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.productCard {
+  min-width: 20rem;
+  max-width: 20rem;
+  height: 27rem;
+  margin: 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.productCard img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+
+.ScubaTank {
+  height: 20rem !important;
+  width: auto !important;
+  transform: rotate(40deg);
+}
+.productCard:hover img {
+  transform: scale(110%) rotate(-30deg) translateX(2rem);
+}
+.productCard:hover .ScubaTank {
+  transform: scale(115%) rotate(0deg) translateX(0rem);
+}
+
+.productCard .productButton {
+  width: 10rem;
+  height: 3rem;
+  border: 0px solid transparent;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--white) !important;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  background: var(--seaGreen);
+  box-shadow: 0.2rem 0.2rem 0.5rem var(--seaBlackTransp);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.productCard:nth-child(2) .productButton {
+  background: var(--seaOrange);
+  border: 0px solid transparent;
+}
+.productCard:nth-child(3) .productButton {
+  background: var(--seaPaleRed);
+  border: 0px solid transparent;
+}
+
+.finOutButton {
+  width: 15rem;
+  outline: 4px solid var(--seaRed);
+  background: var(--seaBlue);
+  color: var(--white);
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 7rem;
+  z-index: 15;
+}
+
+.finOutButton:hover {
+  outline: 4px solid var(--white);
+  color: var(--white);
+}
+
+/* // Small devices (landscape phones, 576px and up)  */
+@media (min-width: 576px) {
+  .productCarousel {
+    width: 100%;
+    height: 35rem;
+    top: 12rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .productCard {
+    min-width: 25rem;
+    max-width: 25rem;
+    height: 30rem;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) {
+  .productCard {
+    margin: 1%;
+  }
+}
+
+/* // Large devices (desktops, 992px and up)  */
+@media (min-width: 992px) {
+  .sectionFourContent {
+    width: 50rem;
+    height: 8rem;
+    top: 7rem;
+    left: 5rem;
+  }
+
+  .productCarousel {
+    height: 52%;
+    width: 85%;
+    top: 12rem;
+    padding-left: 1rem;
+    padding-right: 0rem;
+    justify-content: space-between;
+    overflow:visible;
+  }
+
+  .productCard {
+    min-width: 28%;
+    max-width: 28%;
+    height: 95%;
+    margin: 1.2%;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up)  */
+@media (min-width: 2000px) {
+  .productCarousel {
+    height: 65%;
+    top: 16rem;
+  }
+
+  .ScubaTank {
+    height: 40rem !important;
+  }
+
+}
+
+/* // X-Large devices (large desktops, 1200px and up)  */
+/* @media (min-width: 1200px) { ... }  */
+
+/* // XX-Large devices (larger desktops, 1400px and up)  */
+/* @media (min-width: 1400px) { ... }  */
