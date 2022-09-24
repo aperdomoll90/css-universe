@@ -87,7 +87,7 @@
 @media (min-width: 992px) {
   .parallax-image {
     width: 100vw;
-    bottom: 0px;
+    bottom: -100px;
     left: 0px;
   }
   .site-intro-paragraph {
@@ -96,6 +96,23 @@
     letter-spacing: 0.12rem;
     left: 7rem;
     top: 12rem;
+  }
+  .layerThree {
+    bottom: -8rem;
+  }
+  .layerNine {
+    bottom: -9rem;
+  }
+  .layerTen {
+    bottom: -7rem;
+  }
+  .layerEleven{
+    bottom: -7rem;
+  }
+  .layerTwelve{
+    bottom: -8rem;
+ 
+
   }
 }
 
