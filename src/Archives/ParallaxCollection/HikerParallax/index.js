@@ -6,12 +6,11 @@ const plane3 = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com
 const backgroundMountain = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2Fplane4.png?alt=media&token=4d2c89ac-dfac-469b-a272-add271a7ac0f'
 const sky = 'https://firebasestorage.googleapis.com/v0/b/cssforge.appspot.com/o/hiker%20parallax%2FstarrySky.png?alt=media&token=9cd49bbb-f2ca-431d-a825-6e9ff8b0dd60'
 
-
 function HikerParallax() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       let scroll = window.pageYOffset
-      let screenWidth = window.screen.width  
+      let screenWidth = window.screen.width
 
       const translate = document.querySelectorAll('.translate')
       const backgroundMountain = document.querySelector('.backgroundMountain')
@@ -30,23 +29,25 @@ function HikerParallax() {
 
       // <<<<<<<<<<<<<<<<<<<< WIDTH
       if (backgroundMountain) {
-          if(screenWidth < 992){
-            backgroundMountain.style.width = `${-scroll / 25 + 250}vw`
-          }
-          if(screenWidth > 991){
-            backgroundMountain.style.width = `${-scroll / 25 + 100}vw`
-          }
+        if (screenWidth < 992) {
+          backgroundMountain.style.width = `${-scroll / 25 + 250}vw`
+        }
+        if (screenWidth > 991) {
+          backgroundMountain.style.width = `${-scroll / 25 + 100}vw`
+        }
       }
     })
   }, [])
   return (
-    <div className='HikerParallax'>
-      <img src={hiker} className='hiker translate contentOnLoadAnimation' data-speed='0.3' alt='hiker' />
-      <img src={plane2} className='plane2 translate contentOnLoadAnimation' data-speed='-0.7' alt='mountain forest' />
-      <img src={plane3} className='plane3 translate contentOnLoadAnimation' data-speed='-0.4' alt='medium mountain' />
-      <img src={backgroundMountain} className='backgroundMountain contentOnLoadAnimation' alt='High mountain peeks covered in snow' />
-      <img src={sky} className='sky translate contentOnLoadAnimation' data-speed='-0.3' alt='sky' />
-    </div>
+    <section id='hiker-parallax-wrapper'>
+      <div className='hiker-parallax'>
+        <img src={hiker} className='hiker translate contentOnLoadAnimation' data-speed='0.3' alt='hiker' />
+        <img src={plane2} className='plane2 translate contentOnLoadAnimation' data-speed='-0.7' alt='mountain forest' />
+        <img src={plane3} className='plane3 translate contentOnLoadAnimation' data-speed='-0.4' alt='medium mountain' />
+        <img src={backgroundMountain} className='backgroundMountain contentOnLoadAnimation' alt='High mountain peeks covered in snow' />
+        <img src={sky} className='sky translate contentOnLoadAnimation' data-speed='-0.3' alt='sky' />
+      </div>
+    </section>
   )
 }
 

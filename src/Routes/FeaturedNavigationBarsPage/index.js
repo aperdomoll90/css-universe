@@ -1,4 +1,3 @@
-import SvgPathOnScroll from '../../Archives/ParallaxCollection/SvgPathOnScroll'
 
 import './styles.css'
 import CircularNav from '../../Archives/NavBars/CircularNav'

@@ -1,12 +1,12 @@
 
 import RouteWrapper from '../../Components/RouteWrapper'
 import './styles.css'
-import SvgPathOnScroll from '../../Archives/ParallaxCollection/SvgPathOnScroll'
+import HikerParallax from '../../Archives/ParallaxCollection/HikerParallax'
 
 function FeaturedParallaxPage() {
   return (
     <RouteWrapper>
-      <SvgPathOnScroll/>
+      <HikerParallax/>
     </RouteWrapper>
   )
 }
