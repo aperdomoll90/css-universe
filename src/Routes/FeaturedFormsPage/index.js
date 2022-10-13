@@ -4,10 +4,21 @@ import RouteWrapper from '../../Components/RouteWrapper'
 import './styles.css'
 
 function FeaturedFormsPage() {
+  const cardInfo = [{ text: 'Frist card' }, { text: 'card' }, { text: 'card' }, { text: 'card' }, { text: 'card' }, { text: 'card' }, { text: 'card' }, { text: 'Last card' }]
+  const thumbnailsProps = {
+    pagination: true,
+    navigation: true,
+    thumbnailDirection: { default: 'column', md: 'row', lg: 'row' },
+    color: 'blue',
+    children: cardInfo,
+    className: 'test',
+    cardsPerView: 2,
+  }
+
   return (
     <RouteWrapper>
-      <Carrousel/>
-</RouteWrapper>
+      <Carrousel props={thumbnailsProps} />
+    </RouteWrapper>
     // <div className='featurePageBackground'>
     //   <div className='banner'>
     //     <div className='container'>

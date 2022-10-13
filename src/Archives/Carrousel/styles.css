@@ -11,10 +11,24 @@
   font-size: 1.5em;
   text-align: center;
   outline: 1px solid black;
+  scroll-snap-align:calc(start - 1rem);
+  
 }
 .card.show {
   transform: translateX(0);
   opacity: 1;
 }
 
+nav a:hover {
+  inline-size: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(80, 78, 78, 0.453);
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0.33;
+  cursor:;
+
+}
 
