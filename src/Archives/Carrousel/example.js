@@ -45,25 +45,25 @@ const Item = styled.div`
   justify-content: center;
 `
 
-function getPrevElement(list) {
-  const sibling = list[0].previousElementSibling
+// function getPrevElement(list) {
+//   const sibling = list[0].previousElementSibling
 
-  if (sibling instanceof HTMLElement) {
-    return sibling
-  }
+//   if (sibling instanceof HTMLElement) {
+//     return sibling
+//   }
 
-  return sibling
-}
+//   return sibling
+// }
 
-function getNextElement(list) {
-  const sibling = list[list.length - 1].nextElementSibling
+// function getNextElement(list) {
+//   const sibling = list[list.length - 1].nextElementSibling
 
-  if (sibling instanceof HTMLElement) {
-    return sibling
-  }
+//   if (sibling instanceof HTMLElement) {
+//     return sibling
+//   }
 
-  return null
-}
+//   return null
+// }
 
 function usePosition(ref) {
   const [prevElement, setPrevElement] = React.useState(null)

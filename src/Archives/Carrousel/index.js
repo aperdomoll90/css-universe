@@ -1,38 +1,17 @@
 import React, { useEffect, useRef } from 'react'
 
-import {
-  CardContainer,
-  CarrouselButton,
-  CarrouselCard,
-  LeftContainer,
-  Pagination,
-  RightContainer,
-  Wrapper,
-} from './ResponsiveCarouselComponents'
-
+import { CardContainer, CarrouselButton, CarrouselCard, LeftCarouselButton, RightCarouselButton, Pagination, Wrapper } from './ResponsiveCarouselComponents'
+import usePosition from './utils'
 
 export default function Carrousel(props) {
   const leftRef = useRef(null)
   const rightRef = useRef(null)
   const cardContainerRef = useRef(null)
   //   const cardContainer = cardContainerRef?.current
-  const {
-    id,
-    testId,
-    cardContainerWidth,
-    height,
-    width,
-    wrapperClass,
-    cardsContainerClass,
-    cardClass,
-    pagination,
-    navigation,
-    color,
-    orientation,
-    cardsPerView,
-    children,
-  } = props
 
+  const { id, testId, cardContainerWidth, height, width, wrapperClass, cardsContainerClass, cardClass, pagination, navigation, color, orientation, cardsPerView, children } = props
+
+  const { hasItemsOnLeft, hasItemsOnRight, scrollRight, scrollLeft } = usePosition(cardContainerRef)
   const classes = ['card']
 
   cardClass && classes.push(cardClass)
@@ -53,25 +32,15 @@ export default function Carrousel(props) {
           //   this adds the animation instead of the top line
           //   entry.target.classList.toggle('show', entry.isIntersecting)
 
-          navigation &&
-            intersectingIndex === firstChild &&
-            leftButton?.firstElementChild?.classList?.toggle(
-              'inactive',
-              entry.isIntersecting
-            )
+          navigation && intersectingIndex === firstChild && leftButton?.classList.toggle('inactive', entry.isIntersecting)
 
-          navigation &&
-            intersectingIndex === lastChild &&
-            rightButton?.firstElementChild?.classList.toggle(
-              'inactive',
-              entry.isIntersecting
-            )
+          navigation && intersectingIndex === lastChild && rightButton?.classList.toggle('inactive', entry.isIntersecting)
         })
       },
       {
-                // threshold monitors how much of the child is present in the observer area
+        // threshold monitors how much of the child is present in the observer area
         threshold: 0.5,
-          // rootMargin controls when to observe from the edge on the parent container
+        // rootMargin controls when to observe from the edge on the parent container
         // + means will preload and - will wait till is that far inside the parent
         // rootMargin: '3000px',
 
@@ -106,12 +75,6 @@ export default function Carrousel(props) {
     })
   }, [])
 
-  const goPrev = () => {
-    console.log('prev')
-  }
-  const goNext = () => {
-    console.log('next')
-  }
   return (
     <Wrapper
       id={id}
@@ -119,44 +82,23 @@ export default function Carrousel(props) {
       // ref={responsiveCarouselRef}
       className={wrapperClass}
       height={height}
-      width={width}
-    >
+      width={width}>
       {navigation && (
         <>
-          <LeftContainer
-            data-testId={'left-button-container'}
-            orientation={orientation}
-          >
-            <CarrouselButton ref={leftRef}>
-              <button onClick={goPrev}>&#10094;</button>
-            </CarrouselButton>
-          </LeftContainer>
-          <RightContainer
-            data-testId={'right-button-container'}
-            orientation={orientation}
-          >
-            <CarrouselButton ref={rightRef}>
-              <button onClick={goNext}>&#10095;</button>
-            </CarrouselButton>
-          </RightContainer>
+          <LeftCarouselButton ref={leftRef} data-testId={'left-button-container'} orientation={orientation} hasItemsOnLeft={hasItemsOnLeft} onClick={scrollLeft} aria-label='Previous slide'>
+            &#10094;
+          </LeftCarouselButton>
+
+          <RightCarouselButton ref={rightRef} data-testId={'right-button-container'} orientation={orientation}  hasItemsOnRight={hasItemsOnRight} onClick={scrollRight} aria-label='Next slide'>
+            &#10095;
+          </RightCarouselButton>
         </>
       )}
 
-      <CardContainer
-        ref={cardContainerRef}
-        className={cardsContainerClass}
-        color={color}
-        orientation={orientation}
-        cardContainerWidth={cardContainerWidth}
-      >
+      <CardContainer ref={cardContainerRef} className={cardsContainerClass} color={color} orientation={orientation} cardContainerWidth={cardContainerWidth}>
         {children &&
           children.map((card, index) => (
-            <CarrouselCard
-              key={index}
-              id={`card${index}`}
-              className={classes.join(' ')}
-              cardsPerView={cardsPerView}
-            >
+            <CarrouselCard key={index} id={`card${index}`} className={classes.join(' ')} cardsPerView={cardsPerView}>
               {card}
             </CarrouselCard>
           ))}
@@ -167,11 +109,7 @@ export default function Carrousel(props) {
           {children &&
             children.map((card, index) => (
               // needs to be fixed the <a href> does not work as intended
-              <a
-                key={index}
-                href={`#card${index}`}
-                title={`title card ${index}`}
-              >
+              <a key={index} href={`#card${index}`} title={`title card ${index}`}>
                 {card}
               </a>
             ))}

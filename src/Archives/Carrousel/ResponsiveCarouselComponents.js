@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 const breakpoints = {
   xs: 0,
   md: 768,
@@ -21,27 +20,31 @@ export const Wrapper = styled.div`
   height: ${({ height }) => (height ? height : '100%')};
   width: ${({ width }) => (width ? width : '100%')};
   position: relative;
+  margin-top:20vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: white;
+
+  .inactive {
+    color: rgba(80, 78, 78, 0.453);
+    font-size: 2.5rem;
+    display: block;
+  }
 `
 export const CardContainer = styled.div`
   height: 100%;
-  width: ${({ cardContainerWidth }) =>
-    cardContainerWidth ? cardContainerWidth : '100%'};
+  width: ${({ cardContainerWidth }) => (cardContainerWidth ? cardContainerWidth : '100%')};
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   overflow-x: scroll;
   scroll-snap-type: both mandatory;
+  scroll-snap-align: center;
   scroll-behavior: smooth;
   cursor: ew-resize;
   background: ${({ color }) => color && color};
-  flex-direction: ${({ orientation }) =>
-    orientation && typeof orientation === 'object'
-      ? orientation.default
-      : orientation};
+  flex-direction: ${({ orientation }) => (orientation && typeof orientation === 'object' ? orientation.default : orientation)};
   ${({ orientation }) =>
     orientation &&
     typeof orientation === 'object' &&
@@ -80,10 +83,7 @@ outline: 1px solid black;
 
 /* CONTROLS SIZE OF THE CARDS USING THE cardsPerView PROP */
 
-${({ cardsPerView }) =>
-  cardsPerView && typeof cardsPerView === 'object'
-    ? `flex: 0 0 ${100 / cardsPerView.default}%;`
-    : `flex: 0 0 ${100 / cardsPerView}%;`}
+${({ cardsPerView }) => (cardsPerView && typeof cardsPerView === 'object' ? `flex: 0 0 ${100 / cardsPerView.default}%;` : `flex: 0 0 ${100 / cardsPerView}%;`)}
     
     ${({ cardsPerView }) =>
       cardsPerView &&
@@ -103,44 +103,65 @@ ${({ cardsPerView }) =>
 `
 
 // flex: 0 0 ${({ cardsPerView }) => (cardsPerView ? 100 / cardsPerView : 100)}%;
-export const LeftContainer = styled.div`
+
+const CarouselButton = styled.button`
   position: absolute;
   z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 5rem;
+  min-width: 5rem;
+  font-size: 3.2rem;
+  font-weight: 100;
+  background: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.571);
+  transition: transform 0.1s ease-in-out;
+  cursor: pointer;
+
+  :hover {
+    color: yellow;
+  }
+`
+export const LeftCarouselButton = styled(CarouselButton)`
   ${({ orientation }) =>
-    orientation && typeof orientation === 'object'
-      ? `${
-          orientation.default === 'row'
-            ? 'left: 0; top:auto; transform: rotate(0deg);'
-            : 'top: 0; transform: rotate(90deg);'
-        }`
-      : `${
-          orientation === 'row'
-            ? 'left: 0; top:auto; transform: rotate(0deg);'
-            : 'top: 0; transform: rotate(90deg);'
-        }`}
+    orientation && typeof orientation === 'object' ? `${orientation.default === 'row' ? 'left: 0; top:auto; transform: rotate(0deg);' : 'top: 0; transform: rotate(90deg);'}` : `${orientation === 'row' ? 'left: 0; top:auto; transform: rotate(0deg);' : 'top: 0; transform: rotate(90deg);'}`}
 
   ${({ orientation }) =>
     orientation &&
     typeof orientation === 'object' &&
     `
      @media ${devices.md} {
-       ${
-         orientation.md === 'row'
-           ? 'left: 0; top:auto; transform: rotate(0deg);'
-           : 'top: 0; transform: rotate(90deg);'
-       };
+       ${orientation.md === 'row' ? 'left: 0; top:auto; transform: rotate(0deg);' : 'top: 0; transform: rotate(90deg);'};
      }
      @media ${devices.lg} {
-        ${
-          orientation.lg === 'row'
-            ? 'left: 0; top:auto; transform: rotate(0deg);'
-            : 'top: 0; transform: rotate(90deg);'
-        };
+        ${orientation.lg === 'row' ? 'left: 0; top:auto; transform: rotate(0deg);' : 'top: 0; transform: rotate(90deg);'};
      }
      `}
+`
+export const RightCarouselButton = styled(CarouselButton)`
+  ${({ orientation }) =>
+    orientation && typeof orientation === 'object'
+      ? `${orientation.default === 'row' ? 'right: 0; bottom:auto; transform: rotate(0deg);' : 'bottom: 0; transform: rotate(90deg);'}`
+      : `${orientation === 'row' ? 'right: 0; bottom:auto; transform: rotate(0deg);' : 'bottom: 0; transform: rotate(90deg);'}`}
+
+  ${({ orientation }) =>
+    orientation &&
+    typeof orientation === 'object' &&
+    `
+   @media ${devices.md} {
+     ${orientation.md === 'row' ? 'right: 0; bottom:auto; transform: rotate(0deg);' : 'bottom: 0; transform: rotate(90deg);'};
+   }
+   @media ${devices.lg} {
+      ${orientation.lg === 'row' ? 'right: 0; bottom:auto; transform: rotate(0deg);' : 'bottom: 0; transform: rotate(90deg);'};
+   }
+
+   `}
+`
+
+export const LeftContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 `
 export const RightContainer = styled.div`
   position: absolute;
@@ -149,67 +170,9 @@ export const RightContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  ${({ orientation }) =>
-    orientation && typeof orientation === 'object'
-      ? `${
-          orientation.default === 'row'
-            ? 'right: 0; bottom:auto; transform: rotate(0deg);'
-            : 'bottom: 0; transform: rotate(90deg);'
-        }`
-      : `${
-          orientation === 'row'
-            ? 'right: 0; bottom:auto; transform: rotate(0deg);'
-            : 'bottom: 0; transform: rotate(90deg);'
-        }`}
 
-  ${({ orientation }) =>
-    orientation &&
-    typeof orientation === 'object' &&
-    `
-   @media ${devices.md} {
-     ${
-       orientation.md === 'row'
-         ? 'right: 0; bottom:auto; transform: rotate(0deg);'
-         : 'bottom: 0; transform: rotate(90deg);'
-     };
-   }
-   @media ${devices.lg} {
-      ${
-        orientation.lg === 'row'
-          ? 'right: 0; bottom:auto; transform: rotate(0deg);'
-          : 'bottom: 0; transform: rotate(90deg);'
-      };
-   }
-
-   `}
 `
-export const CarrouselButton = styled.div`
-  button {
-    min-height: 5rem;
-    min-width: 5rem;
-    font-size: 3.2rem;
-    font-weight: 100;
-    background: transparent;
-    border: none;
-    color: rgba(0, 0, 0, 0.571);
-    transition: 1s;
 
-    /* padding: 15px 32px; */
-    /* text-align: center;
-    text-decoration: none;
-    display: inline-block; */
-  }
-  button:hover {
-    color: yellow;
-  }
-  .inactive {
-    color: rgba(80, 78, 78, 0.453);
-    font-size: 2.5rem;
-    display: block;
-    /* cursor: not-allowed; */
-    /* opacity: 0; */
-  }
-`
 export const Pagination = styled.nav`
   block-size: calc(10% 100%);
   position: absolute;
@@ -260,9 +223,7 @@ export const Pagination = styled.nav`
     * the --slide variable is set in the
     * keyframes below.
     */
-    transform: translateX(
-      calc((100% + var(--gap, 0.5rem)) * calc(var(--slide, 1) - 1))
-    );
+    transform: translateX(calc((100% + var(--gap, 0.5rem)) * calc(var(--slide, 1) - 1)));
     animation: dot 1s steps(1, end) forwards;
     /* shhh... here is the magic */
     animation-timeline: slide;
