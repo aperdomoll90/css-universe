@@ -1,319 +1,83 @@
-/* this equalizes all content */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
 :root {
+  --primary-StripeColor: #b5ffe1;
+  --secondary-color: #161d26;
+  --secondary-transColor: #1f283590;
+  --section1-color: #000001;
 
-  --mainBackgroundColor: #151515;
-  --backgroundColor:#000013;
+  --title-font-color: #0abead;
+  --font-primary-color: #95a5c6;
+  --font-secondary-color: #91a2c2;
+  --font-third-color: #6a758d;
+  --font-test-color: #63626a;
+  --font-test-light-color: #d3c9c9;
+  --font-name-color: #af2853;
 
-  --logoColor: #887850;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 900;
 
+  /* --cloud-color:whitesmoke;
+--snow-color:rgb(220, 255, 206);
+--canopy-color:rgb(101, 219, 248);
+--drkCanopy-color:rgb(53, 121, 138);
+--mdmCanopy-color:rgb(58, 164, 190);
+--mdm2canopy-color:rgb(11, 118, 144);
+--smallCanopy-color:rgb(166, 225, 240); */
+
+  --button-orange-color: #e59500;
+  --button-on-hover: #08bbaa;
+
+  --primary-color: #020019;
+  --magic-mint: #b5ffe1;
+  --violet-color: #541388;
+  --gamboge: #e59500;
+  --amaranth: #d93654;
+  --white: #f2f2f2;
+  --transparent-metal: #15151596;
+  /* --metal: #151515; */
+  --metal: #020019;
   
-  --white: #fff;
-  --seaWhiteTransp: rgba(255, 255, 255, 0.774);
-
-  --black: #000;
-  --blackTransp:rgba(0, 0, 0, 0.26);
-  --heroBlackTransp:rgba(0, 0, 0, 0.109);
-  --seaBlackTransp: rgba(0, 0, 0, 0.589);
-
-  --seaBlue: #0f1a43;
-  --seaLightBlue: #5d7fd6;
-  --seaPaleBlue:#DFEDF3;
-
-  --seaGreen: #ae9861;
-  --seaOrange: #dd5700;
-
-  --seaRed: #e20953;
-  --seaPaleRed: #e20953;
-
-
-  /* >>>>>> SEA ANIMATION TIMES <<<<<<<<<< */
-  --coverAnimationTime: 2.5s;
-  --coverAnimationTimeExtended: 3s;
-  --standardAnimationTime:1s;
-  --standardRingAnimationTime:1.5s;
-  --firstDelayGroup: calc(var(--standardAnimationTime) - 0.5s);
-  --secondDelayGroup: var(--standardAnimationTime);
-  --thirdDelayGroup: calc(var(--standardAnimationTime) + 1s);
 }
-
-
-/* >>>>>>>>>>> ANIMATIONS <<<<<<<<<<<<< */
-@keyframes onLoad {
-  0% {
-    opacity: 0;
-    transform: translateY(1.5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes onLoadCover {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
 
 body {
+  color: var(--font-third-color);
   font-family: 'Poppins', sans-serif;
-}
-html {
-  scroll-behavior: smooth;
-}
-.title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  position: relative;
-}
-
-@media (max-width: 600px) {
-  .title {
-    font-size: 1.2rem;
-  }
-}
-
-.App {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  background: linear-gradient(to bottom, var(--backgroundColor) 25%, transparent),radial-gradient(ellipse at bottom right,#151e64, #050a32 15%, #000013 40%);
-   /* background-size: 300% 300%;
-  animation: gradient 15s ease infinite; */
-}
-
-/* This adds a 4 way gradient and a radial all around */
-/* background: radial-gradient(50% 176%, #25385450 80%, #0619228e 100%),linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-  linear-gradient(127deg, rgba(174, 250, 174, 0.8), rgba(0,255,0,0) 70.71%),
-  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
-
-/* @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */
-
-.container {
-  max-width: 95rem;
-  padding: 0 2rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--primary-color);
 }
 
 section {
   width: 100%;
-  position: relative;
-}
-
-section .container {
-  padding: 3rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  min-height: 95vh;
-}
-
-section .container > * {
-  min-width: 95%;
-  min-height: 90%;
-}
-
-@media (max-width: 850px) {
-  section .container {
-    grid-template-columns: 1fr;
-  }
-}
-
-.featurePageBackground {
-  width: 170vw;
   height: 100vh;
   position: relative;
-  overflow-x: scroll;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, #cdc6cadf, #cdc6ca49 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-  background-size: 300% 300%;
-  animation: gradient 15s ease infinite;
-  color: rgba(255, 255, 255, 0.75);
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.65;
-}
-@media (max-width: 850px) {
-  .featurePageBackground {
-    width: 100vw;
-  }
-}
-
-/* This adds a 4 way gradient and a radial all around */
-/* background: radial-gradient(50% 176%, #25385450 80%, #0619228e 100%),linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-linear-gradient(127deg, rgba(174, 250, 174, 0.8), rgba(0,255,0,0) 70.71%),
-linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.formTitle {
-  color: rgba(255, 255, 255, 0.875);
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.75rem;
-  line-height: 1.2;
-  letter-spacing: 0.1rem;
-}
-.featurePageBackground .banner {
-  height: 60vh;
-  min-width: 150vw;
-  border-radius: 5px;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-  cursor: default;
-  position: relative;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 2rem 4rem 0.25rem rgb(46 43 55 / 57%);
 }
-@media (max-width: 850px) {
-  .featurePageBackground .banner {
-    height: 90vh;
-    min-width: 80vw;
-    flex-direction: column;
-    margin-top: 10%;
-    overflow: scroll;
+
+h3 {
+  font-size: 1rem;
+  color: var(--font-test-light-color);
+  font-weight: var(--font-semibold);
+}
+h4 {
+  font-size: 1rem;
+  color: var(--font-test-color);
+  font-weight: var(--font-semibold);
+}
+
+@media (min-width: 900px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.5rem;
   }
 }
 
-.featurePageBackground .banner .container {
-  height: 100%;
-  width: 40%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-  margin: 0;
-  padding: 0;
-}
-.long {
-  width: 60% !important;
-}
-
-@media (max-width: 850px) {
-  .featurePageBackground .banner .container {
-    height: 80vh;
-    width: 100%;
-    flex-direction: column;
-  }
-  .long {
-    width: 100% !important;
-  }
-}
-
-.leftSide {
-  margin: 0;
-  padding-bottom: 5%;
-  height: 100%;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background: linear-gradient(-217deg, #a693978c, #a693973a 70.71%), linear-gradient(336deg, #362339, #362339b2 90.71%), linear-gradient(217deg, #362339a9, #36233926 60.71%);
-}
-.rightSide {
-  height: 100%;
-  width: 70%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: space-evenly; */
-  background: linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);
-}
-
-.box {
-  position: relative;
-  padding: 5%;
-}
-
-.longLeftSide {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background: linear-gradient(217deg, #666176, #43416a 80.71%);
-}
-
-.longRightSide {
-  width: 70%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  background: linear-gradient(217deg, #535165, #323459 80.71%);
-}
-
-@media (max-width: 850px) {
-  .leftSide {
-    height: 80vh;
-    width: 100%;
-  }
-  .rightSide {
-    height: 80vh;
-    width: 100%;
-  }
-  .longLeftSide {
-    height: 80vh;
-    width: 100%;
-  }
-  .longRightSide {
-    height: 80vh;
-    width: 100%;
-  }
-}

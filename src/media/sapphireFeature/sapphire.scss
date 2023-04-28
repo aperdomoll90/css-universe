@@ -1,0 +1,923 @@
+@import '../../styles/variables';
+
+
+  //************************** Welcome Route
+  
+  .animationField {
+    position: relative;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  // @media only screen and (max-width: 1025px) {
+  //   .animationField {
+  //     position: relative;
+  //     height: 100%;
+  //     width: 100%;
+  //   }
+  // }
+  
+  //************* astral Field
+  .astralField {
+    height: 95%;
+    width: 90%;
+    transform: rotate(-25deg);
+    position: absolute;
+    left: 6%;
+    top: -10%;
+    animation: astralRotation 7s alternate ease-in-out infinite;
+  }
+  @keyframes astralRotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(100deg);
+    }
+  }
+  .moon {
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    bottom: 15%;
+    left: 0%;
+    overflow: hidden;
+    position: absolute;
+    &-moonBody {
+      height: 100%;
+      width: 100%;
+      background-color: #fcffa8a4;
+    }
+    &-moonHole {
+      height: 65%;
+      width: 65%;
+      border-radius: 50%;
+      position: absolute;
+      overflow: hidden;
+      background-color: #33325d;
+    }
+  }
+  
+
+  .sun {
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, red, rgb(255, 102, 0), yellow);
+    box-shadow: 0px 0px 80px red;
+    position: absolute;
+    right: 15%;
+    top: 0%;
+  }
+  @media only screen and (max-width: 1025px) {
+    .startButton {
+      height: 17%;
+      width: 28%;
+      top: 13%;
+      left: 63%;
+    }
+  }
+  
+  //************* Base
+  .FloatingBase {
+    position: relative;
+    height: 65%;
+    width: 60%;
+    animation: baseFloat 15s infinite ease-in-out alternate;
+  
+    &-field {
+      height: 80%;
+      width: 100%;
+      position: absolute;
+      top: 12%;
+      clip-path: polygon(46% 19%, 100% 56%, 56% 100%, 0 64%);
+      background-color: rgb(8, 156, 170);
+    }
+    &-leftTopBase {
+      height: 40%;
+      width: 64%;
+      position: absolute;
+      top: 55%;
+      left: -2.5%;
+      transform: rotate(13deg);
+      clip-path: polygon(0% 39%, 96% 78%, 100% 100%, 0 55%);
+      background-color: rgba(24, 24, 59, 0.924);
+    }
+    &-leftBottomBase {
+      height: 20%;
+      width: 74%;
+      position: absolute;
+      top: 86.6%;
+      left: -8%;
+      transform: rotate(26deg);
+      clip-path: polygon(86% 19%, 0 0, 100% 100%);
+      background-color: rgba(24, 24, 59, 0.596);
+    }
+    @media only screen and (max-width: 1025px) {
+      &-leftTopBase {
+        height: 40%;
+        width: 61%;
+        top: 55%;
+        left: -2.8%;
+        transform: rotate(9deg);
+        clip-path: polygon(2% 39%, 98% 80%, 100% 100%, 0 55%);
+      }
+      &-leftBottomBase {
+        height: 20%;
+        width: 68%;
+        top: 86%;
+        left: -7.6%;
+        transform: rotate(20deg);
+        clip-path: polygon(92.5% 10%, 0 0, 100% 100%);
+      }
+    }
+    &-rightTopBase {
+      height: 40%;
+      width: 60%;
+      position: absolute;
+      top: 49%;
+      right: -2.6%;
+      transform: rotate(-30deg);
+      clip-path: polygon(7% 80%, 100% 58%, 98% 75%, 0 100%);
+      background-color: #8ecbe0f3;
+    }
+    &-rightBottomBase {
+      height: 31.5%;
+      width: 64%;
+      position: absolute;
+      top: 77%;
+      right: -13%;
+      transform: rotate(-25.5deg);
+      clip-path: polygon(100% 0, 10.5% 46%, 0 100%);
+      background-color: rgba(59, 59, 177, 0.383);
+    }
+    @media only screen and (max-width: 1025px) {
+      &-rightTopBase {
+        height: 40%;
+        width: 52%;
+        top: 48.7%;
+        right: -1%;
+        transform: rotate(-22.9deg);
+        clip-path: polygon(4.5% 80%, 100% 58%, 98% 75%, 0 100%);
+      }
+      &-rightBottomBase {
+        height: 36%;
+        width: 54%;
+        top: 76%;
+        right: -6%;
+        transform: rotate(-17deg);
+        clip-path: polygon(100% 0, 7% 48%, 0 100%);
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .FloatingBase {
+      height: 60%;
+      width: 80%;
+     
+    }
+  }
+  @keyframes baseFloat {
+    0% {
+      transform: translateY(5%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+  }
+  
+  //************* Mountains
+  .mountainRange {
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+  }
+  .mediumRock {
+    z-index: 15;
+    height: 15%;
+    width: 20%;
+    position: absolute;
+    right: 0%;
+    bottom: -10%;
+    &-borderTop {
+      height: 100%;
+      width: 70%;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      left: 25%;
+    }
+  }
+  .mediumRockBottom {
+    height: 90%;
+    width: 150%;
+    border-radius: 50%;
+    background-color: #0a516b;
+    position: absolute;
+    left: -25%;
+    bottom: 18%;
+    &-shine {
+      height: 10%;
+      width: 17%;
+      border-radius: 50%;
+      position: absolute;
+      right: 25%;
+      bottom: 55%;
+      transform: skewY(20deg);
+      background-color: #1b8bb4;
+    }
+  }
+  
+  .bigRock {
+    z-index: 13;
+    height: 20%;
+    width: 25%;
+    position: absolute;
+    right: -10%;
+    bottom: -6%;
+    &-borderTop {
+      height: 100%;
+      width: 70%;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      left: 25%;
+    }
+  }
+  .bigRockBottom {
+    height: 90%;
+    width: 150%;
+    border-radius: 50%;
+    background-color: rgb(19, 19, 230);
+    position: absolute;
+    left: -25%;
+    bottom: 18%;
+    &-shine {
+      height: 10%;
+      width: 17%;
+      border-radius: 50%;
+      position: absolute;
+      right: 25%;
+      bottom: 55%;
+      transform: skewY(20deg);
+      background-color: rgb(128, 128, 248);
+    }
+  }
+  
+  .smallRock {
+    z-index: 14;
+    height: 10%;
+    width: 15%;
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    &-borderTop {
+      height: 100%;
+      width: 70%;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      left: 25%;
+    }
+  }
+  .smallRockBottom {
+    height: 90%;
+    width: 150%;
+    border-radius: 50%;
+    background-color: #9bceeb;
+    position: absolute;
+    left: -25%;
+    bottom: 18%;
+    &-shine {
+      height: 10%;
+      width: 17%;
+      border-radius: 50%;
+      position: absolute;
+      right: 25%;
+      bottom: 55%;
+      transform: skewY(20deg);
+      background-color: #dcf2ff;
+    }
+  }
+  
+  .middleBush {
+    z-index: 6;
+    height: 20%;
+    width: 18%;
+    position: absolute;
+    left: 55%;
+    bottom: -4%;
+  
+    &-circle {
+      height: 100%;
+      width: 50%;
+      border-radius: 50%;
+      background-color: #2b795c;
+      position: absolute;
+      top: -3%;
+      left: 25%;
+      box-shadow: 0px 10px 80px rgba(0, 0, 0, 0.623);
+    }
+    &-circle:nth-child(2) {
+      height: 65%;
+      width: 35%;
+      top: 33%;
+      left: 0%;
+    }
+    &-circle:nth-child(3) {
+      height: 55%;
+      width: 32%;
+      top: 33%;
+      left: 64%;
+    }
+    &-circle:nth-child(4) {
+      height: 35%;
+      width: 20%;
+      top: 63%;
+      left: 86%;
+    }
+    &-base {
+      height: 25%;
+      width: 80%;
+      background-color: #2b795c;
+      position: absolute;
+      top: 73%;
+      left: 16%;
+    }
+  }
+  
+  .leftBush {
+    z-index: 11;
+    height: 25%;
+    width: 18%;
+    position: absolute;
+    left: -10%;
+    bottom: -15%;
+  
+    &-circle {
+      height: 100%;
+      width: 50%;
+      border-radius: 50%;
+      background-color: #2b795c;
+      position: absolute;
+      top: -3%;
+      left: 25%;
+    }
+    &-circle:nth-child(2) {
+      height: 65%;
+      width: 35%;
+      top: 33%;
+      left: 0%;
+    }
+    &-circle:nth-child(3) {
+      height: 55%;
+      width: 32%;
+      top: 33%;
+      left: 64%;
+    }
+    &-circle:nth-child(4) {
+      height: 35%;
+      width: 20%;
+      top: 63%;
+      left: 86%;
+    }
+    &-base {
+      height: 25%;
+      width: 80%;
+      background-color: #2b795c;
+      position: absolute;
+      top: 73%;
+      left: 16%;
+    }
+  }
+  
+  .pine {
+    z-index: 11;
+    height: 50%;
+    width: 18%;
+    position: absolute;
+    left: 35%;
+    bottom: -10%;
+  
+    &-foliage {
+      z-index: 1;
+      height: 25%;
+      width: 40%;
+      position: absolute;
+      background-color: #275846;
+      border-radius: 40%;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    &-foliage:nth-child(2) {
+      height: 20%;
+      width: 60%;
+      top: 15%;
+      left: -10%;
+    }
+    &-foliage:nth-child(3) {
+      height: 20%;
+      width: 60%;
+      top: 23%;
+      left: -10%;
+    }
+    &-foliage:nth-child(4) {
+      height: 28%;
+      width: 80%;
+      top: 30%;
+      left: -20%;
+    }
+    &-foliage:nth-child(5) {
+      height: 20%;
+      width: 85%;
+      top: 48%;
+      left: -25%;
+    }
+    &-foliage:nth-child(6) {
+      height: 30%;
+      width: 95%;
+      bottom: 20%;
+      left: -27%;
+    }
+  }
+  .rightPine {
+    z-index: 4;
+    height: 50%;
+    width: 18%;
+    position: absolute;
+    left: 57%;
+    bottom: 0%;
+  }
+  .lefMountain {
+    z-index: 10;
+    height: 75%;
+    width: 40%;
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+  
+    &-mountain {
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      clip-path: polygon(37% 0, 61% 0, 100% 100%, 0% 100%);
+      background-color: #137aa7;
+    }
+    &-half {
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0%;
+      clip-path: polygon(49% 0, 61% 0, 100% 100%, 51% 100%);
+      background-color: #13739c;
+    }
+    &-snow {
+      z-index: 4;
+      height: 50% !important;
+      width: 52% !important;
+      position: absolute;
+      top: -15%;
+      left: 22%;
+    }
+  }
+  .middleMountain {
+    z-index: 0;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    bottom: 15%;
+  
+    &-mountain {
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      clip-path: polygon(37% 0, 61% 0, 100% 100%, 0% 100%);
+      background-color: darkblue;
+    }
+    &-half {
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0%;
+      clip-path: polygon(49% 0, 61% 0, 100% 100%, 51% 100%);
+      background-color: rgb(2, 2, 116);
+    }
+    &-snow {
+      z-index: 4;
+      height: 50% !important;
+      width: 52% !important;
+      position: absolute;
+      top: -15%;
+      left: 22%;
+    }
+  }
+  .rightMountain {
+    z-index: 5;
+    height: 85%;
+    width: 40%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+  
+    &-mountain {
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      clip-path: polygon(37% 0, 61% 0, 100% 100%, 0% 100%);
+      background-color: #00529c;
+    }
+    &-half {
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0%;
+      clip-path: polygon(49% 0, 61% 0, 100% 100%, 51% 100%);
+      background-color: #024783;
+    }
+    &-snow {
+      z-index: 4;
+      height: 50% !important;
+      width: 52% !important;
+      position: absolute;
+      top: -15%;
+      left: 22%;
+    }
+  }
+  
+  //************** clouds
+  .cloud {
+    z-index: 18;
+    height: 30%;
+    width: 40%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    animation: moveRight 15s infinite ease-in-out alternate;
+  
+    &-circle {
+      height: 100%;
+      width: 50%;
+      border-radius: 50%;
+      background-color: var(cloud-color);
+      position: absolute;
+      top: -3%;
+      left: 25%;
+    }
+    &-circle:nth-child(2) {
+      height: 65%;
+      width: 35%;
+      top: 33%;
+      left: 0%;
+    }
+    &-circle:nth-child(3) {
+      height: 55%;
+      width: 32%;
+      top: 33%;
+      left: 64%;
+    }
+    &-circle:nth-child(4) {
+      height: 35%;
+      width: 20%;
+      top: 63%;
+      left: 86%;
+    }
+    &-base {
+      height: 25%;
+      width: 80%;
+      background-color: var(cloud-color);
+      position: absolute;
+      top: 73%;
+      left: 16%;
+    }
+  }
+  
+  .cloudRight {
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    animation: moveLeft 15s infinite ease-in-out alternate;
+  
+    &-circle {
+      height: 100%;
+      width: 50%;
+      border-radius: 50%;
+      background-color: var(cloud-color);
+      position: absolute;
+      left: 25%;
+      top: -3%;
+    }
+    &-circle:nth-child(2) {
+      height: 65%;
+      width: 38%;
+      top: 33%;
+      left: 0%;
+    }
+    &-circle:nth-child(3) {
+      height: 65%;
+      width: 38%;
+      top: 33.5%;
+      left: 77.6%;
+    }
+    &-circle:nth-child(4) {
+      height: 35%;
+      width: 20%;
+      top: 30%;
+      left: 65%;
+    }
+    &-base {
+      height: 35%;
+      width: 80%;
+      background-color: var(cloud-color);
+      position: absolute;
+      top: 63%;
+      left: 16%;
+    }
+  }
+  @media only screen and (max-width: 1025px) {
+    .cloud {
+      height: 27%;
+      width: 40%;
+    }
+    .cloudRight {
+      height: 15%;
+      width: 25%;
+    }
+  }
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    50% {
+      transform: translateX(50%);
+    }
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(80%);
+    }
+    50% {
+      transform: translateX(-55%);
+    }
+  }
+  
+  //************** Tree
+  
+  .treeField {
+    z-index: 11;
+    height: 35%;
+    width: 18%;
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+  
+    &-trunk {
+      background-color: brown;
+      height: 50%;
+      width: 11%;
+      position: absolute;
+      bottom: 4%;
+      left: 70%;
+    }
+    &-roots {
+      background-color: brown;
+      height: 15%;
+      width: 20%;
+      position: absolute;
+      bottom: 4%;
+      left: 66%;
+      clip-path: polygon(51% 54%, 65% 61%, 77% 69%, 90% 81%, 100% 100%, 50% 100%, 0 100%, 11% 76%, 21% 65%, 35% 59%);
+    }
+  
+    &-branch {
+      background-color: brown;
+      height: 7%;
+      width: 40%;
+      position: absolute;
+      bottom: 34%;
+      left: 81%;
+      transform: skewY(-30deg);
+    }
+    &-circle {
+      height: 55%;
+      width: 75%;
+      border-radius: 50%;
+      position: absolute;
+      top: 18%;
+      right: 0%;
+      background-color: var(drkCanopy-color);
+      animation: canopyBack 10s infinite alternate;
+    }
+  }
+  
+  .canopy {
+    z-index: 4;
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 15%;
+  
+    animation: canopyMov 10s infinite alternate;
+  
+    &-circle {
+      height: 95%;
+      width: 80%;
+      border-radius: 50%;
+      position: absolute;
+      top: -3%;
+      left: 25%;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.376);
+      background-color: var(canopy-color);
+    }
+    &-circle:nth-child(2) {
+      height: 45%;
+      width: 38%;
+      top: 33%;
+      left: 0%;
+      z-index: 2;
+      background-color: var(smallCanopy-color);
+      animation: canopyPart 10s infinite alternate;
+    }
+  
+    &-circle:nth-child(3) {
+      z-index: 4;
+      background-color: var(mdmCanopy-color);
+      height: 60%;
+      width: 50%;
+      top: 40%;
+      left: 5%;
+      animation: canopyPart 10s infinite alternate;
+    }
+    &-circle:nth-child(4) {
+      z-index: 6;
+      background-color: var(mdm2canopy-color);
+      height: 70%;
+      width: 60%;
+      top: 45%;
+      left: 70%;
+      animation: canopyEnd 10s infinite alternate;
+    }
+  }
+  
+  @keyframes canopyMov {
+    0% {
+      transform: translateX(0%);
+    }
+    20% {
+      transform: translateX(15%);
+    }
+    30% {
+      transform: translateX(13%);
+    }
+    40% {
+      transform: translateX(15%);
+    }
+    50% {
+      transform: translateX(11%);
+    }
+  }
+  @keyframes canopyPart {
+    0% {
+      transform: translateX(0%);
+    }
+    20% {
+      transform: translateX(18%);
+    }
+    20% {
+      transform: translateX(10%);
+    }
+    30% {
+      transform: translateX(25%);
+    }
+  }
+  @keyframes canopyBack {
+    0% {
+      transform: translateX(0%);
+    }
+    20% {
+      transform: translateX(20%);
+    }
+    30% {
+      transform: translateX(15%);
+    }
+    40% {
+      transform: translateX(23%);
+    }
+  }
+  @keyframes canopyEnd {
+    0% {
+      transform: translateX(0%);
+    }
+    20% {
+      transform: translateX(18%);
+    }
+    30% {
+      transform: translateX(10%);
+    }
+    40% {
+      transform: translateX(23%);
+    }
+  }
+
+
+  .tent {
+    z-index: 100;
+    height: 25%;
+    width: 35%;
+    position: absolute;
+    top: 48%;
+    left: 32%;
+  
+    &-triangle {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      position: absolute;
+      background-color: rgba(100, 236, 152, 0.835);
+    }
+    &-frontWall {
+      height: 200%;
+      width: 80%;
+      border-radius: 50%;
+      position: absolute;
+      top: -60%;
+      left: 45%;
+      background-color: rgba(52, 116, 76, 0.719);
+    }
+    &-door {
+      height: 30%;
+      width: 35%;
+      border-radius: 50%;
+      transform: skewY(38deg);
+      position: absolute;
+      top: 55%;
+      left: 10%;
+      background-color: rgba(10, 22, 15, 0.856);
+    }
+  }
+  .sign {
+    z-index: 11;
+    height: 17%;
+    width: 13%;
+    position: absolute;
+    top: -28%;
+    left: 42%;
+    animation: arrowWiggle 2s alternate ease infinite;
+  
+    &-arrow {
+      height: 100%;
+      width: 100%;
+      border-radius: 20%;
+      background-color: crimson;
+      border-inline-color: black;
+      position: absolute;
+      background-color: rgba(158, 231, 162, 0.479);
+      clip-path: polygon(73% 0, 70% 60%, 100% 61%, 49% 100%, 0 60%, 30% 60%, 23% 0);
+    }
+    // &-half{
+    //   height: 100%;
+    //   width: 100%;
+    //   border-radius: 20%;
+    //   position: absolute;
+    //   background-color: rgb(6, 6, 31);
+    //   clip-path: polygon(50% 51%, 50% 32%, 100% 0, 100% 50%, 51% 100%, 50% 80%);
+    // }
+  }
+  @keyframes arrowWiggle {
+    0% {
+      transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+      transform: scale(0.9, 1.1) translateY(-90px);
+    }
+    50% {
+      transform: scale(1.05, 0.95) translateY(0);
+    }
+    57% {
+      transform: scale(1, 1) translateY(-7px);
+    }
+    64% {
+      transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      transform: scale(1, 1) translateY(0);
+    }
+  }
+  

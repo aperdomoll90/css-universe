@@ -1,0 +1,51 @@
+export const experience = [
+  {
+    position: 'Software Engineer',
+    company: 'City Furniture',
+    location: 'ss',
+    from: '01/24/2022',
+    to: 'Current',
+    description: '- E-commerce Development. Migrating a Magento Platform to an MEAN-STACK. Design and Develop engineering efforts for the microservices solution. Provide solution architect support to help define the best approach developing custom solutions.',
+  },
+  {
+    position: 'Software Engineer ',
+    company: 'Rockval, Inc',
+    location: 'West Palm Beach',
+    from: '07/2021',
+    to: '12/2021',
+    description: 'Mobile Application Development, Front-end Development, Design, UX/UI.',
+  },
+  {
+    position: 'Home Health Intake Coordinator',
+    company: 'First Choice Home Health and Hospice',
+    location: 'Harrisonburg VA',
+    from: '03/2020',
+    to: '04/2021',
+    description: 'Insurance and medical data collection management for Home Care, Home Health and Hospice department. Maintain accuracy of records of physicians, family/friends, and facilities. (names, credentials, PECOS, NPI, OIG check, license expiration and contact information, etc.)',
+  },
+  {
+    position: 'Medicaid Financial Analyst (Outpatient Emergency Department)',
+    company: 'Change Healthcare',
+    location: 'Boca Raton FL',
+    from: '10/2016',
+    to: '02/2020',
+    description:
+      'Collection, maintenance and verification of insurance and medical data to ensure fulfillment of Medicaid and Medicare programs assistance for eligible patients. Experience medical insurance verification systems (ie. Emdeon office, Florida Medicaid, Flimmis), Cerner Powerchart Electronic Medical Records (EMR) system, Protected Health Information (PHI), Personal Identifiable Information (PII), Personnel Transaction Identifier (PTI), and Health Insurance Portability and Accountability Act (HIPAA).',
+  },
+  {
+    position: 'Red Zone Specialist',
+    company: 'Apple',
+    location: 'Boca Raton',
+    from: '07/2014',
+    to: '12/2016',
+    description: 'Provided support, training and troubleshooting for customers’ existing products and applications, as well as recommending new products that will fit their technical requirements.',
+  },
+  {
+    position: 'Computer User Support Specialists',
+    company: 'Facultad de Ciencias Médicas Julio Trigo López',
+    location: 'Cuba',
+    from: '10/2008',
+    to: '10/2013',
+    description: 'Supervised the performance, configuration, upgrade and repair of equipment and systems for employee and student use. Trained employees and students on how to use their devices and Microsoft Office applications.',
+  },
+]

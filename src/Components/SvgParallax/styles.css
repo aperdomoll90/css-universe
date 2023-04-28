@@ -1,0 +1,139 @@
+.landing-Parallax {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.parallax-image {
+  width: 350vw;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: var(--index);
+}
+
+.layerTwo {
+  left: -12rem;
+  bottom: -1rem;
+}
+.layerSeven {
+  left: -22rem;
+}
+
+.layerEight {
+  left: -22rem;
+}
+
+.landing-bottom-shadow {
+  height: 170px;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  opacity: 1;
+  z-index: 40;
+  background: linear-gradient(to top, #00000ae4, transparent);
+}
+
+.landing-scroll-indicator {
+  position: absolute;
+  z-index: 50;
+  bottom: 5rem;
+  color: var(--seaBlue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 1;
+  color: var(--white);
+}
+
+.content-section {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+.content-section-to-front {
+  z-index: 100;
+}
+.site-intro-paragraph {
+  max-width: 80vw;
+  font-size: 1rem;
+  letter-spacing: 0.12rem;
+  position: absolute;
+  left: 2rem;
+  top: 3rem;
+  z-index: 55;
+  color: var(--white);
+}
+
+/* // Large devices (desktops, 992px and up)  */
+@media (min-width: 992px) {
+  .parallax-image {
+    width: 100vw;
+    bottom: -100px;
+    left: 0px;
+  }
+  .site-intro-paragraph {
+    max-width: 31vw;
+    font-size: 1.2rem;
+    letter-spacing: 0.12rem;
+    left: 7rem;
+    top: 12rem;
+  }
+  .layerThree {
+    bottom: -8rem;
+  }
+  .layerNine {
+    bottom: -9rem;
+  }
+  .layerTen {
+    bottom: -7rem;
+  }
+  .layerEleven{
+    bottom: -7rem;
+  }
+  .layerTwelve{
+    bottom: -8rem;
+ 
+
+  }
+}
+
+.contentOnLoadAnimation {
+  opacity: 1;
+  animation: solar-system-content-section-animation 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.sectionAnimationOpacity {
+  animation: solar-system-content-section-animation 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes solar-system-content-section-animation {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,74 @@
+.right {
+  grid-area: right;
+  text-align: start;
+}
+
+.company {
+  color: var(--font-secondary-color);
+}
+.position {
+  color: var(--title-font-color);
+  font-weight: var(--font-semibold);
+}
+
+.resumeSkills {
+  width: 30vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.resumeSkills p {
+  display: flex;
+  width: 7rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.contactMe {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contactMe-line {
+  width: 20vw;
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contactMe-icon {
+  width: 2rem;
+  height: auto;
+  margin-right: 3%;
+}
+
+.hobbyArea {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 3%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1025px) {
+  .resumeSkills {
+    flex-direction: row;
+    width: 100%;
+  }
+  .resumeSkills p {
+    font-size: 0.7rem;
+    width: 4rem;
+    justify-content: space-between;
+  }
+  .contactMe-line {
+    font-size: 0.5rem;
+  }
+  .hobbyArea {
+    width: 90%;
+    flex-direction: row;
+  }
+}

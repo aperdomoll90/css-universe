@@ -1,0 +1,47 @@
+.left {
+  grid-area: left;
+  text-align: end;
+  align-items: flex-end;
+  /* outline: 2px solid red; */
+  padding-right: 1rem;
+  max-height: 170vh;
+}
+
+.left-container {
+  width: 85%;
+}
+
+#experience-title{
+  margin: .5rem;
+}
+.experience-container {
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#experience-scroll {
+  width: 90%;
+  line-height: 2rem;
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--title-font-color);
+  font-weight: var(--font-semibold);
+  margin-top: 1rem;
+}
+.experience-card {
+  width: 90%;
+  margin-left: 0%;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+  .experience-card {
+    margin-left: 10%;
+    margin-bottom: 2rem;
+  }
+  #experience-scroll {
+    display: none;
+  }
+}

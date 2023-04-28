@@ -1,0 +1,52 @@
+.imageOverlay {
+    position: relative;
+    width: 19%;
+    margin: 2%;
+  }
+  
+  .imageOverlay-img {
+    width: 100%;
+    display: block;
+  }
+
+  .imageOverlay-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .imageOverlay-overlay > * {
+    transform: translateY(10px);
+    transition: transform 0.25s;
+  }
+  .imageOverlay-overlay:hover {
+    opacity: 1;
+  }
+  .imageOverlay-overlay:hover > * {
+    transform: translateY(0px);
+  }
+  .imageOverlay-title {
+    color: white;
+  }
+
+  @media only screen and (max-width: 1025px) {
+    .hobbyArea {
+      width: 90%;
+      flex-direction: row;
+    }
+    .imageOverlay {
+      width: 25%;
+      margin: 3%;
+    }
+    .hobbyArea img {
+      width: 5.6vh;
+      height: auto;
+    }
+  }

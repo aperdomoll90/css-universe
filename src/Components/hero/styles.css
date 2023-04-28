@@ -1,0 +1,142 @@
+.river {
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+.titleBox {
+  width: 40%;
+  position: absolute;
+  bottom: 15rem;
+  left: 10rem;
+  z-index: 21;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.intro-name {
+  font-weight: var(--font-semibold);
+  color: var(--white);
+  text-shadow: 10px 1px 10px black;
+  font-size: 1rem;
+}
+
+.intro-name span {
+  color: var(--button-orange-color);
+  font-size: 3.4rem;
+  text-shadow: 10px 1px 10px black;
+  display: block;
+}
+
+.slogan {
+  font-weight: var(--font-bold);
+  color: var(--amaranth);
+  font-size: 2rem;
+  text-shadow: 10px 1px 10px black;
+}
+.titleBox--description {
+  /* color: var(--amaranth); */
+  font-size: 1rem;
+}
+.personalLinks {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  bottom: 200%;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 31;
+}
+.personalLinks img {
+  width: 3vw !important;
+  display: block;
+}
+
+.personalLinks-overlay {
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+@media only screen and (max-width: 1025px) {
+  .laptop {
+    bottom: 0px;
+  }
+  .personalLinks {
+    top: 75%;
+    right: 3%;
+  }
+  .titleBox {
+    top: 60%;
+    left: 45%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .titleBox {
+    top: 45%;
+    height: 30%;
+  }
+  .titleBox-bold {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-height: 734px) {
+  .profile {
+    height: 90%;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .laptop {
+    height: 85%;
+    top: -10%;
+    right: -10%;
+  }
+  .profile {
+    height: 75%;
+    width: auto;
+  }
+  .cellphone {
+    bottom: 8%;
+    width: 400px;
+    right: -80px;
+  }
+  .personalLinks {
+    width: 8%;
+    left: 8%;
+  }
+  .personalLinks img {
+    width: 100%;
+  }
+
+  .titleBox {
+    top: 15%;
+    left: 35%;
+    height: 30%;
+    width: 60%;
+  }
+  .titleBox-name {
+    font-size: 1rem;
+  }
+  .titleBox-name span {
+    font-size: 1.3rem;
+  }
+  .titleBox-bold {
+    font-size: 2rem;
+  }
+  .titleBox-description {
+    font-size: 0.6rem;
+  }
+}
